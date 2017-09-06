@@ -1,0 +1,508 @@
+idRef {
+  id: "548e0dcd336265a80c006b8b"
+}
+ui_name: "01-ranr-yaks_yamoto"
+nodes {
+  idRef {
+    id: "548e0de9336265a80c006b91"
+  }
+  index: 0
+  text: "{{GM}}The man is talking into a comm link.{{/GM}}\n\nNo, that will not do.\n\nYes, I understand...\n\n{{GM}}He takes notice of you.{{/GM}}"
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Comparison (int)"
+            args {
+              call_value {
+                functionName: "Get Variable (int)"
+                args {
+                  string_value: "mob_bunrakustate"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 3
+                }
+              }
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (int)"
+            args {
+              call_value {
+                functionName: "Get Variable (int)"
+                args {
+                  string_value: "mob_bunrakustate"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "Comparison Ops"
+                }
+                args {
+                  int_value: 4
+                }
+              }
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e0e32336265a80c006b94"
+  }
+  index: 1
+  text: "{{GM}}He notices the Bunraku in your company.{{/GM}}\n\nA glorious turn of events!"
+  branches {
+    responseText: "I guess you see \'my\' Bunraku."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "You notice my novahot looks?"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "You get promoted or something?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e0eb9336265a80c006b9a"
+  }
+  index: 2
+  text: "I do. In fact, we have recently suffered a setback. One of our dancers slash service girls have passed.\n\nBy passed, I mean that the Sim Rig experienced a fatal malfunction. We had to clean brains of the glass and temporarily shut down."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e0f9e336265a80c006b9d"
+  }
+  index: 3
+  text: "{{GM}}He looks the Bunraku over.{{/GM}}\n\nThe damage to her is great. How did you acquire it?"
+  branches {
+    responseText: "Yeah, I\'d say they are all damaged. You know missing brain and all that."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e101f336265a80c006ba0"
+  }
+  index: 4
+  text: "That may be. From where did you acquire it?"
+  branches {
+    responseText: "{{CC}}Charisma: 5{{/CC}} Ever hear of the \'Emerald City Ripper\'? Turns out he spliced and diced Bunraku together. We, um, liberated her, from there."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Intelligence: 4{{/CC}} I don\'t about you, cabr\303\263n. Isn\'t bad for business to ask so many questions?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Does it matter?"
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e1071336265a80c006ba3"
+  }
+  index: 5
+  text: "We are familiar with Dr. Holmes. We have done much business with him in the past before learning of his sickening past times. Interesting, I did not know it was you who geeked him."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e10c3336265a80c006ba6"
+  }
+  index: 6
+  text: "Damage aside. We know that his Bunraku were of quality product. Are you willing to part with it?\n\nYou\'ll have to wait on your payment. Large amounts of nuyen involved in transactions as these take time.\n\nBy my honor of the Bushido, you have my word that you will receive your nuyen."
+  branches {
+    responseText: "Not a problem. Take her off my hands."
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "YakBrothelMoveBunraku"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Yeah, yeah, yeah, scout\'s honor and all that drek. Listen just take the girl. I gotta run."
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "YakBrothelMoveBunraku"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e120b336265a80c006bab"
+  }
+  index: 7
+  text: "Hmm, you have a point, but really, that is not a concern. You could say that we operate under permit from Lone Star to maintain this operation.\n\nIn fact some of them, come here. We OWN Seattle, gaijin, remember that."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e12d1336265a80c006bae"
+  }
+  index: 8
+  text: "Regardless, the fact of the matter is you have a Bunrakue. Are you willing to part with it?\n\nYou\'ll have to wait on your payment. Large amounts of nuyen involved in transactions as these take time.\n\nBy my honor of the Bushido, you have my word that you will receive your nuyen."
+  branches {
+    responseText: "Not a problem. Take her off my hands."
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "YakBrothelMoveBunraku"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Yeah, yeah, yeah, scout\'s honor and all that drek. Listen just take the girl. I gotta run."
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "YakBrothelMoveBunraku"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e1327336265a80c006bb5"
+  }
+  index: 9
+  text: "You come to me with damaged product. How am I to guarantee that you did not steal it?"
+  branches {
+    responseText: "Come on, I wouldn\'t scam the Yakuza!"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Listen, chummer, if I steal anything, it\'s guns, data, and ammo. Not freaky sex robots."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "01b_yakuzaWillBePissed"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "548e137f336265a80c006bb8"
+  }
+  index: 10
+  text: "I would hope not. It would be bad for your health.\n\n{{GM}}You get a feeling in your gut, but dismiss it.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e13fb336265a80c006bc0"
+  }
+  index: 11
+  text: "Fair point. Still, if you are lying to me, know that Seattle may become a very unfriendly place for you.\n\n{{GM}}You get a feeling in your gut, but dismiss it.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e14bc336265a80c006bc5"
+  }
+  index: 12
+  text: "{{GM}}He scoffs.{{/GM}}\n\nPlease..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e14ec336265a80c006bc8"
+  }
+  index: 13
+  text: "I noticed the Bunraku in your company. We\'ve recently experienced the loss of one ours. Rig malfunction. Very gory, as in guts on the glass."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548e1647336265a80c006c10"
+  }
+  index: 14
+  text: "{{GM}}You receive only a stare as a response.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f0b613362650808006c72"
+  }
+  index: 15
+  text: "I presume you\'re bothering me for a reason, yeah?"
+  branches {
+    responseText: "Sounds like you have problem. I\'m good at solving problems."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "Actually, no. I\'ll be going."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f0bf53362650808006c76"
+  }
+  index: 16
+  text: "Is that so?\n\n{{GM}}He chuckles, but it is not one of mirth.{{/GM}}\n\nIf I need your help, you\'ll be the first to know."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "mob_bunrakustate"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 5
+      }
+    }
+  }
+  nextNodeIndex: 0
+}

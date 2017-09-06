@@ -1,0 +1,11 @@
+id: "00_bypass_box"
+type: ItemType_QuestItem
+uirep {
+  name: "Matrix Bypass Box"
+  description: "An advanced little piece of hardware, this little box right just has to soldered into the right place and; BOOM, no Matrix grid access period.\n\nRenraku markings cover this little piece of hardware and its microcontroller. You best be careful of whom you give this to, lest you lead the Megacorp on your tail."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "sleekoffice/sleekoffice_tech_gatepeg_s"
+}

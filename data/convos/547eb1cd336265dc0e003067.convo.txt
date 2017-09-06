@@ -1,0 +1,192 @@
+idRef {
+  id: "547eb1cd336265dc0e003067"
+}
+ui_name: "z01-yaklab_ascekii"
+nodes {
+  idRef {
+    id: "547eb1e6336265dc0e00306d"
+  }
+  index: 0
+  text: "So the little yellow worms have sent someone competent now that streets shall drown in blood."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547eb24a336265dc0e003070"
+  }
+  index: 1
+  text: "No matter... \n\nMy Lord shall reward me beyond measure when I sacrifice your entire team for its essence."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547eb2c1336265dc0e003073"
+  }
+  index: 2
+  text: "Could this man be connected to Wiseman\'s sister? You wonder."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "547eb412336265dc0e003076"
+  }
+  index: 3
+  text: "DIE!"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "All Actors With Tag"
+            args {
+              call_value {
+                functionName: "Get Map Item (SenseTagList)"
+                args {
+                  string_value: "cultaa_ext"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "AllOrAny"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5920e11f6463307417006bfe"
+  }
+  index: 4
+  text: "It\'s clear that these are members of the same illusive \"Cultaa\" you encountered at Raleigh\'s."
+  branches {
+    responseText: "Where\'s Ayle, fragface?"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Great. More of you cultist bastards."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "{{GM}}Remain Silent.{{/GM}}"
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+}
+nodes {
+  idRef {
+    id: "5920e1cc6463307417006c06"
+  }
+  index: 5
+  text: "{{GM}}He\'s clearly taken aback. It seems every mook in this \"Cultaa\" knows her name, confirming to you her status as one of their operatives.{{/GM}}\n\nI-- No! I know nothing of who you speak of, worm!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5920e24a6463307417006c0b"
+  }
+  index: 6
+  text: "I shall succeed where they failed!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

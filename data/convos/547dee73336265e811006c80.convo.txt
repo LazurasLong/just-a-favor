@@ -1,0 +1,72 @@
+idRef {
+  id: "547dee73336265e811006c80"
+}
+ui_name: "01-syb-elevator2"
+nodes {
+  idRef {
+    id: "547dee81336265e811006c86"
+  }
+  index: 0
+  text: "Return to Sybrespace ground floor?"
+  branches {
+    responseText: "{{GM}}Go to the ground floor.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "547def5d336265e811006c92"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{GM}}Walk away.{{/GM}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "547e093e336265d811005e12"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

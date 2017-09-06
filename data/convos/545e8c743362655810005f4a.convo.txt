@@ -1,0 +1,65 @@
+idRef {
+  id: "545e8c743362655810005f4a"
+}
+ui_name: "sybrespace_bartender"
+nodes {
+  idRef {
+    id: "545e8c843362655810005f50"
+  }
+  index: 0
+  text: "Hoi, $+(l.name), what can I get for you tonight? I got drinks and \'specials\'."
+  branches {
+    responseText: "{{CC}}\302\24510{{/CC}} I\'ll have a beer please."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}\302\24510{{/CC}} I\'ll have soykaf, black, please."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Let me see the \'specials\'."
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "545e8f65336265f822003297"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Nothing. Gotta run."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "545e8d7b3362655810005f56"
+  }
+  index: 1
+  text: "Whatever you say, $(l.guy)."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 10
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

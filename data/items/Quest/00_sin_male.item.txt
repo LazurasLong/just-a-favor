@@ -1,0 +1,11 @@
+id: "00_sin_male"
+type: ItemType_QuestItem
+uirep {
+  name: "SIN -- Male"
+  description: "A SIN corresponding to Rusty Shackleford. For all intents and purposes when using this SIN, you are the blue-collar tradesman that is Rusty Shackleford."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "office/office_tech_keycardlanyard_s"
+}

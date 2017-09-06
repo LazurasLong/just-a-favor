@@ -1,0 +1,320 @@
+idRef {
+  id: "5485fa59336265281e00075f"
+}
+ui_name: "01-ranr-lskapn"
+nodes {
+  idRef {
+    id: "5485fa75336265281e000765"
+  }
+  index: 0
+  text: "Halt!\n\n{{GM}}He spits the next word.{{/GM}}\n\nCitizen!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fa96336265281e000768"
+  }
+  index: 1
+  text: "This is a mandatory identification checkpoint. If you just walked up to me without your papers in order, then your stupid ass can rot in prison."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fb18336265281e000779"
+  }
+  index: 2
+  text: "Your System Identification Number confirmation data, please."
+  branches {
+    responseText: "{{GM}}Present you and your team\'s SINs.{{/GM}}"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{CC}}Etiquette: Security{{/CC}} What\'s wrong with the Captain? Does command have it in for you? A posting like this, man..."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 14
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5485f90b336265281e00075d"
+  }
+}
+nodes {
+  idRef {
+    id: "5485ffc1336265281e0007d5"
+  }
+  index: 3
+  text: "SCANNING....\n\nSCANNING....\n\nSCANNING...."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5485ff62336265281e0007b3"
+  }
+}
+nodes {
+  idRef {
+    id: "5485fe5d336265281e000792"
+  }
+  index: 4
+  text: "You\'re clear. Please proceed."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5485f90b336265281e00075d"
+  }
+}
+nodes {
+  idRef {
+    id: "5485fe90336265281e000795"
+  }
+  index: 5
+  text: "Go on get to your shitty job, so I can get to mine."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548600c4336265281e00080e"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fbcd336265281e000780"
+  }
+  index: 6
+  text: "{{GM}}Your Security background has changed the captain\'s perception of you.{{/GM}}\n\nYeah, you must know what that\'s like. I can\'t wait to retire. I already have a short lifespan, and my promotion to a coveted desk job was given to some other dumbass ork. Now I\'m stuck playing La Migra.\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fc4e336265281e000783"
+  }
+  index: 7
+  text: "Anyway, sorry for the attitude, you know how it is. We have to keep the fear of the law in these bottom-feeding scum.\n\nNow, got your SIN data for me to verify, pal?"
+  branches {
+    responseText: "{{GM}}Present you and your team\'s SINs.{{/GM}}"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fff5336265281e0007e4"
+  }
+  index: 8
+  text: "SCANNING...\n\nSCANNING...\n\nSCANNING..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5485ff62336265281e0007b3"
+  }
+}
+nodes {
+  idRef {
+    id: "5485fcf0336265281e000786"
+  }
+  index: 9
+  text: "{{GM}}He squints in your direction.{{/GM}}\n\nNow, wait, your SIN doesn\'t register at the Star? Why would that.. be?"
+  branches {
+    responseText: "{{CC}}Bluff{{/CC}} I\'m from the CAS. The Azzies have it in for us. We\'re not exactly friends. Don\'t they teach that in the Academy?"
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fd8b336265281e000789"
+  }
+  index: 10
+  text: "Texan, eh?\n\nI\'ve been trying to get transferred there for years! It\'s where the action is I tell ya. Makes sense the Star would take care of you against them crazy mexicans."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5485fe30336265281e00078c"
+  }
+  index: 11
+  text: "Sir..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5485f90b336265281e00075d"
+  }
+}
+nodes {
+  idRef {
+    id: "5485fe40336265281e00078f"
+  }
+  index: 12
+  text: "Go on through, pal."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548600c4336265281e00080e"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

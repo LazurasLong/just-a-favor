@@ -1,0 +1,213 @@
+idRef {
+  id: "598e9aaa6463303420006b7c"
+}
+ui_name: "01-ranr2-flunkee"
+nodes {
+  idRef {
+    id: "598e9ab86463303420006b82"
+  }
+  index: 0
+  text: "{{GM}} If double-startled\'s not a term, you just coined it. This LoneStar officer is sweating bullets already in fear about something and upon seeing your arrival...{{/GM}}\n\nHe-...-He...-- ...Hey!\n\nStop right... stop, right there!\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "flunkee"
+  actions {
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "594bc8ce326336c0070078a3"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "Seattle:General/standing_aiming_pistol"
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "598e9c276463303420006b85"
+  }
+  index: 1
+  text: "{{GM}}Although he tries to keep his pistol grip firm at you, the man is unable to stay firm. He\'s convulsing in what seems to be fear... Maybe.{{/GM}}\n\nDon\'t even think about it! Back-up will be here soon!\n\n{{GM}}He angles his head downwards.{{/GM}}\n\nThis is officer first private.........."
+  branches {
+    responseText: "You might wanna check those comms again, chummer."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_createdDiversion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Are you unaware of all the damn chrome pointing your way or what..."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_createdDiversion"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "{{GM}}Execute the Star before he fires one off.{{/GM}}"
+    actions {
+      ops {
+        functionName: "No Effect"
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "598ea3df6463303420006bae"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "flunkee"
+}
+nodes {
+  idRef {
+    id: "598ea0c56463303420006b98"
+  }
+  index: 2
+  text: "Rate of movement slowed, his body language speaks of shock as he slowly clicks his vocoder...\n\nWhat little color the already pale chum had swiftly melts of his face."
+  branches {
+    responseText: "CASE: MOB/YAK WAR DIVERSION"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "CASE: KOOKY KULTIST DIVERSION"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_InputKeyboard
+}
+nodes {
+  idRef {
+    id: "598ea2106463303420006b9f"
+  }
+  index: 3
+  text: "I... I mean, uhm..."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -1,0 +1,276 @@
+idRef {
+  id: "591f20a36463302817004045"
+}
+ui_name: "00-apt-ayle"
+nodes {
+  idRef {
+    id: "591f20a9646330281700404b"
+  }
+  index: 0
+  text: "We have a specialist clean-up team enroute to this location, Ms. Ayle."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "talkySam"
+}
+nodes {
+  idRef {
+    id: "591f2137646330281700404e"
+  }
+  index: 1
+  text: "About time your people did something competent.\n\n{{GM}}She vaguely wisps a nod your direction.{{/GM}}\n\nRemember the Cultaa does not work for you. You work for the Cultaa."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f21f26463302817004051"
+  }
+  index: 2
+  text: "{{GM}}The air around her seems to begin change form via hue and composition.{{/GM}}\nI\'m ever so depressed with my luck. Gee, detectable only by close-by magii, and here, you are. To whom am I speaking with? You must have... questions, surely?"
+  branches {
+    responseText: "What the frag is the \'Cultaa\'?"
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "What have you done with Raleigh?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Renraku? Frag, we\'re slotting hit."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f2629646330281700407d"
+  }
+  index: 3
+  text: "One of the many hands in-secret that serve my Lord. And, as I...\n\nHe would be the fourth rule."
+  branches {
+    responseText: "\"Fourth rule?\""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f26e96463302817004080"
+  }
+  index: 4
+  text: "Never even frag with a Xel\'Na\'Ta."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f27186463302817004083"
+  }
+  index: 5
+  text: "Well, you have definitely exceeded your question quota.\n\nI really must be going."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "591f20676463302817004042"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f3136646330d80c004035"
+  }
+  index: 6
+  text: "You mean the girl that was just to become holy essence? Yes, yes, yes...\n\nWhat about her?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591f31d1646330d80c004038"
+  }
+  index: 7
+  text: "{{GM}}Like a pitbull about to break chain, Wiseman seethes with rage.{{/GM}}\n\nYou bitch. You don\'t know what you\'re talking about! G\'YA!!!!"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "591f20676463302817004042"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+nodes {
+  idRef {
+    id: "591f236b6463302817004056"
+  }
+  index: 8
+  text: "{{GM}}The red samurai lithely puffs up in pride.{{/GM}}\n\nYou are right to fear the Red Samurai, criminal. I will not allow you to stain the image of our liege.\n\n{{GM}}You can\'t help but imagine a smirk on his face.{{/GM}}\n\"Our people...\""
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "talkySam"
+}
+nodes {
+  idRef {
+    id: "591f249f6463302817004059"
+  }
+  index: 9
+  text: "Right, right... The average shadowrunner is such a fool. You had your chance at questions, but...\n\nI really must be going."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "591f20676463302817004042"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

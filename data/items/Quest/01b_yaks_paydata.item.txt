@@ -1,0 +1,8 @@
+id: "01b_yaks_paydata"
+type: ItemType_QuestItem
+uirep {
+  name: "Paydata: Yakuza Bunraku Auctions"
+  description: "A list of future auctions featuring freshly lobotomized Bunraku to be held by the Yakuza. Details include origin, race, model, and et cetera. It\'s pretty sickening, but there\'s a probably more than a few vigilantes in Seattle itching to purchase information like this."
+}
+credentials: 0
+sorting_group: "Quest"

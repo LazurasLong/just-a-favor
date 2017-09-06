@@ -1,0 +1,143 @@
+idRef {
+  id: "54825eaf3362655414003b2c"
+}
+ui_name: "z01-yaklab_cutscene"
+nodes {
+  idRef {
+    id: "54825eb23362655414003b32"
+  }
+  index: 0
+  text: "As you can see, Ryuji, the great one has been greatly satisfied by the work done here today."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825ba83362655414003b2a"
+  }
+}
+nodes {
+  idRef {
+    id: "54825f1b3362655414003b35"
+  }
+  index: 1
+  text: "The boons that led to you climbing the corporate ladder were just the beginning. Expect greater blessings, now that Our Lord has been able to feed through the... artifacts."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825ba83362655414003b2a"
+  }
+}
+nodes {
+  idRef {
+    id: "54825f993362655414003b38"
+  }
+  index: 2
+  text: "I would hope so for your petty cult\'s sake. Although today, a small cut of many future cuts has been delivered to Mitsuhama."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825bc73362655414003b2b"
+  }
+}
+nodes {
+  idRef {
+    id: "5482609d3362655414003b3b"
+  }
+  index: 3
+  text: "Do not presume to be in charge here. The power of Renraku is nothing compared to the raw power of XEL\'SLYS."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825ba83362655414003b2a"
+  }
+}
+nodes {
+  idRef {
+    id: "5482615e3362655414003b3e"
+  }
+  index: 4
+  text: "We have uninvited guests...\n\nWorkers! These mercenaries seek to set you back under the employ of the Yakuza.\n\nWe must depart."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825bc73362655414003b2b"
+  }
+}
+nodes {
+  idRef {
+    id: "548261b43362655414003b41"
+  }
+  index: 5
+  text: "Agreed, the offering has already drawn unwarranted attention."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548262563362655414003b54"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "54825ba83362655414003b2a"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

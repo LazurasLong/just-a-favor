@@ -1,0 +1,81 @@
+idRef {
+  id: "591e1e9b64633010120062a4"
+}
+ui_name: "00-apt-magepath2_itor"
+nodes {
+  idRef {
+    id: "591e1ed264633010120062ae"
+  }
+  index: 0
+  text: "The as-for-now-yet unknown Astral Presence from prior makes it self known!\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+}
+nodes {
+  idRef {
+    id: "591e1f6264633010120062b1"
+  }
+  index: 1
+  text: "{{GM}}She is aware of your now-gaint awareness.{{/GM}}\n\nWho???"
+  branches {
+    responseText: "{{GM}}Remain Silent{{/GM}}"
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591e22ec64633010120062c2"
+  }
+  index: 2
+  text: "Ey! Goodbye!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591e23a764633010120062c5"
+  }
+  index: 3
+  text: "{{GM}}You have gained knowledge of this \"Sorceress\'\" location.{{/GM}}"
+  branches {
+    responseText: "More like hello."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "591e23c664633010120062c8"
+  }
+  index: 4
+  text: "What\'s that again, omae?"
+  branches {
+    responseText: "Just hustle and follow me, Wiseman."
+    actions {
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "ActivateMAGEDOOR"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+roots {
+  nextNodeIndex: 0
+}

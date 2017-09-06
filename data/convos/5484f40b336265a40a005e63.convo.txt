@@ -1,0 +1,221 @@
+idRef {
+  id: "5484f40b336265a40a005e63"
+}
+ui_name: "01-yla-ghamal"
+nodes {
+  idRef {
+    id: "5484f415336265a40a005e69"
+  }
+  index: 0
+  text: "G\'day! I am Ghamal, spirit detective at your service.\n\n{{GM}}This ork sure is full of himself.{{/GM}}"
+  branches {
+    responseText: "Great. A paranormal P.I., just what I need."
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f45a336265a40a005e6c"
+  }
+  index: 1
+  text: "{{GM}}He feigns offense to your comment.{{/GM}}\n\nP.I.?!\n\nI am one of the greatest paranormal investigators in the Seattle metroplex. I prefer Spirit Detective. It sounds much better."
+  branches {
+    responseText: "So you\'re a fraggin\' chiphead? Great."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f4f6336265a40a005e6f"
+  }
+  index: 2
+  text: "{{GM}}He smirks.{{/GM}}\n\nFunny that you mention chips. It was my investigation in a series of mysterious movements from the deep metaplanes..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f550336265a40a005e72"
+  }
+  index: 3
+  text: "That led me on the trail of a secretive and mysterious secret society, until recently, known simply as the Cultaa."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f592336265a40a005e75"
+  }
+  index: 4
+  text: "Whom as of recently were behind a culling of sorts of society\'s most undesirable, chipheads, here in the Redmond Barrens."
+  branches {
+    responseText: "Wha--"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f5e1336265a40a005e78"
+  }
+  index: 5
+  text: "The Eagle, my guiding spirit and totem, has led me to you. Other than a face for this organization and their recent antics, I have no leads.\n\nI was hoping that I could join you for the time being."
+  branches {
+    responseText: "I am impressed. I\'m $+(s.name)."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f674336265a40a005e7b"
+  }
+  index: 6
+  text: "{{GM}}He says nothing awaiting further words from you.{{/GM}}"
+  branches {
+    responseText: "That\'s all you know?"
+    nextNodeIndex: 7
+    onlyOnce: true
+    idRef {
+      id: "5490eb51336265d415004e69"
+    }
+  }
+  branches {
+    responseText: "You want to run with me? Fine. Know that we won\'t be chasing some stupid cult."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5490e90c336265d415004e5e"
+  }
+  index: 7
+  text: "{{GM}}His expression is grim{{/GM}}\n\nI am afraid so. All I was able to see was the involvement of... something."
+  branches {
+    responseText: "Did you know that they are connected to Renraku?"
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5490e98c336265d415004e61"
+  }
+  index: 8
+  text: "Renraku Computer Systems?\n\nThat makes no sense."
+  branches {
+    responseText: "They are being funded by some executive. We encountered him before he escaped."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5490ea37336265d415004e64"
+  }
+  index: 9
+  text: "A lead! I will consult with the Spirits. They may know more about this individual, even his name and location. He may have magical countermeasures employed, but that makes no difference.\n\nI am Ghamal, Seattle Spirit Detective!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5490ea94336265d415004e67"
+  }
+  index: 10
+  text: "I fear this something I can not investigate alone."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f6c8336265a40a005e7e"
+  }
+  index: 11
+  text: "You saw the magic with your own eyes, $+(l.name). It is inevitable that we will encounter them as they put their plans in action.\n\nBut, I understand. I will make an asset to your team. I am a skilled Shaman and good with a shotgun."
+  branches {
+    responseText: "Follow me."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f75f336265a40a005e81"
+  }
+  index: 12
+  text: "I... ehrm, well I stole that yellow van over there. Perhaps, I could ride with you?"
+  branches {
+    responseText: "Sure, whatever."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01_ghamal_hasjoined"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "spokewitghamal"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

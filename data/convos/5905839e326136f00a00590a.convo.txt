@@ -1,0 +1,120 @@
+idRef {
+  id: "5905839e326136f00a00590a"
+}
+ui_name: "00-apt-magepath_itro"
+nodes {
+  idRef {
+    id: "5905cbca326136d406002df7"
+  }
+  index: 0
+  text: "It is only the dawn of the summer; And yet, as you and your fellow runners proceed down this humid, putrid hallway of hovels, the air drops to a chill. A sharp chill. One that has your group exhaling these bellowing clouds of carbon monoxide.\n\nThis is no failure in any climate control system-- Nay, your inner awakened begins to feel..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5905ce39326136d406002e35"
+  }
+  index: 1
+  text: "Ey, $+(l.name), you wiz, omae?\n\nThis slottin\' drek being beheld here has got me feeling the creeps. I have a really bad feeling, Raleigh..."
+  branches {
+    responseText: "Don\'t worry about your sis\', Wiseman. We\'ll get her."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}*ssshsst*{{/CC}} I sense... something, from beyond."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Can it, chummer. There\'s a kinda null-wiz, fraggin\' bit of voodoo going on here."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+nodes {
+  idRef {
+    id: "5905d0cb326136d406002e7a"
+  }
+  index: 2
+  text: "Null sweat when it comes to her, $+(l.name). It\'s you I was--\n\n{{GM}}Wiseman simply stops speaking and turns away, head & body, 90 degrees.{{/GM}}\n\n{{GM}}You proceed to do the same.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+nodes {
+  idRef {
+    id: "5905d19a326136d406002e7d"
+  }
+  index: 3
+  text: "Hh-huh? What the drek!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+nodes {
+  idRef {
+    id: "5905d1ce326136d406002e80"
+  }
+  index: 4
+  text: "... By shadows of the sake\'s being MIR, through VA-IM rays of conservation\'s energy-- My pet of all worlds bring more lives to me! ...\n\n{{GM}} You see the astral shadows and disturbances of someone binding through-wit something that is hungering. {{/GM}}\n"
+  branches {
+    responseText: "{{GM}}Reach out with your Awakened mind both aggressively and retroactively to track the source of the whisper.{{/GM}}"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5905fb16326136d406002f26"
+  }
+  index: 5
+  text: "AAAAAAAAAAAyyyyyyyyyyyyyyyyyaaaahhhhhhh...\n\nOhhhhhhhhhhhhhhhhhhh Nnononoooooooooo-----\n\nPlea...\n"
+  branches {
+    responseText: "{{GM}}Continue exerting your magicks.{{/GM}}"
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5905d965326136d406002f10"
+  }
+}
+nodes {
+  idRef {
+    id: "5905fb9c326136d406002f29"
+  }
+  index: 6
+  text: "Just when you thought you were able to nab the one responsible for those horrible screams, their presence vanishes.\nThey seem to have drawn out of the Further like snake in the grass.\n\nPerhaps it will be possible to catch him/her/it again further into the complex...."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5905d1f3326136d406002e86"
+  }
+  index: 7
+  text: "{{GM}}Wiseman suppresses his near reflexive reaction to facepalm.{{/GM}}\n\nI swear... with you guys, there\'s always some kinda null-wiz drek that be going onn--"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+roots {
+  nextNodeIndex: 0
+}

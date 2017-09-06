@@ -1,0 +1,11 @@
+id: "01b_sin_unisex"
+type: ItemType_QuestItem
+uirep {
+  name: "SIN -- Middle Class"
+  description: "A relatively good SIN provided to you by the Mrs. Johnson for the Ranier Innovations run. While in possession of this SIN, you are, for all intents and purposes, a faceless middle class drone allowed into areas rated `B` and below by Lone Star."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "office/office_tech_keycardlanyard_s"
+}

@@ -1,0 +1,432 @@
+idRef {
+  id: "547e3f97336265c00e0020ee"
+}
+ui_name: "z01-syb_yakjon"
+nodes {
+  idRef {
+    id: "547e3fa3336265c00e0020f4"
+  }
+  index: 0
+  text: "Ah, runner.\n\nI have been expecting you.\n\n{{GM}}The man\'s hand is bandaged. With blood marring the gauss around where his pinky finger once was.{{/GM}}"
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Race"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Race"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3bad3362657407006e68"
+  }
+  index: 1
+  text: "You may refer to me as Mister Takeshi."
+  branches {
+    responseText: "What\'s the job?"
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Nice stump there. You Yakuza?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3c4a3362657407006e6e"
+  }
+  index: 2
+  text: "Straight to the point. I like that, runner.\n\nAllow me to oblige."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3c873362657407006e71"
+  }
+  index: 3
+  text: "One of our BTL laboratories in the Barrens has been experiencing... esoteric problems."
+  branches {
+    responseText: "Esoteric problems?"
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3cca3362657407006e74"
+  }
+  index: 4
+  text: "Yes.\n\nWe have been unable to establish contact. I had sent a team of our best to \'fix\' the situation. They have not returned.\n\nIn fact, no one we have sent has, and no one is stupid enough to start a war."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3d443362657407006e77"
+  }
+  index: 5
+  text: "This facility is vital to our operations. To destroy would it be foolish as would doing nothing.\n\nPeople have been reported fleeing the area as well."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3de43362657407006e7a"
+  }
+  index: 6
+  text: "This combination of events has forced me to seek Mr. Vnevoski for his \'outsourcing\' services.\n\nHelp me restore my honor. I\'m funding you out of my own pocket. Should you fail, I must depart in sepukku."
+  branches {
+    responseText: "Any more intel?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Let\'s talk nuyen."
+    nextNodeIndex: 11
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3ee23362657407006e7e"
+  }
+  index: 7
+  text: "Afraid not, runner.\n\nAlthough, do know this, our eyes and ears are blind. The area around the lab is now avoided by the scum."
+  branches {
+    responseText: "LoneStar?"
+    nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "547f40983362657407006e97"
+    }
+  }
+  branches {
+    responseText: "There a chance your men are still alive?"
+    nextNodeIndex: 9
+    onlyOnce: true
+    idRef {
+      id: "547f409a3362657407006e98"
+    }
+  }
+  branches {
+    responseText: "This all sounds strange."
+    nextNodeIndex: 10
+    onlyOnce: true
+    idRef {
+      id: "547f409f3362657407006e99"
+    }
+  }
+  branches {
+    responseText: "Let\'s talk nuyen."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3f3b3362657407006e81"
+  }
+  index: 8
+  text: "Negative.\n\nOnly gangers and our sample market exist there, all SINless."
+  branches {
+    responseText: "Any more intel?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3fda3362657407006e84"
+  }
+  index: 9
+  text: "I do not know. "
+  branches {
+    responseText: "Any more intel?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f40163362657407006e87"
+  }
+  index: 10
+  text: "Indeed, runner.\n\nI fear it is yokai."
+  branches {
+    responseText: "Any more intel?"
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f41763362657407006eac"
+  }
+  index: 11
+  text: "I will pay you \302\2453,000 upfront, tax-free.\n\nUpon your return, \302\2456,000, subject to Vnevoski\'s \"tax.\"\n\nHe has assured me you will take the job."
+  branches {
+    responseText: "I\'ll get it done."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f42bb3362657407006eda"
+  }
+  index: 12
+  text: "Good luck, runner."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "SIDEMIS_stage"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "547f44a73362657407006f68"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3bfd3362657407006e6c"
+  }
+  index: 13
+  text: "{{GM}}He takes no insult to what you say.{{/GM}}\n\nIndeed, runner. I have brought dishonor to the family through my mishandling of affairs."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f3b5a3362657407006e66"
+  }
+  index: 14
+  text: "I was not expecting you to be... hito ni chikai...\n\nNevertheless..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547f442f3362657407006f37"
+  }
+  index: 15
+  text: "Return to me when you have completed your task.\n\nDo not cross me..."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "SIDEMIS_stage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "SIDEMIS_stage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 15
+}

@@ -1,0 +1,48 @@
+idRef {
+  id: "5483a996336265340d001b67"
+}
+ui_name: "sybrespace_magicman"
+nodes {
+  idRef {
+    id: "5483a9a5336265340d001b6d"
+  }
+  index: 0
+  text: "Someone here with an interest in the arcane arts, perhaps?\n\nOr are you here for more... base pleasures?"
+  branches {
+    responseText: "Show me the goods."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Goodbye."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5483a9da336265340d001b70"
+  }
+  index: 1
+  text: "Certainly."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5483a97c336265340d001b66"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

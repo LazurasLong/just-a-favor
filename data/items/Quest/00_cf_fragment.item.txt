@@ -1,0 +1,8 @@
+id: "00_cf_fragment"
+type: ItemType_QuestItem
+uirep {
+  name: "CF Data Fragment"
+  description: "This appears to be a fragment of either data or code of the entity encountered in the Wiseman sister\'s local node.\n\nThis might be worth some serious nuyen."
+}
+credentials: 0
+sorting_group: "Quest"

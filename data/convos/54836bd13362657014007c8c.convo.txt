@@ -1,0 +1,318 @@
+idRef {
+  id: "54836bd13362657014007c8c"
+}
+ui_name: "z01-yaklab_wiseman"
+nodes {
+  idRef {
+    id: "54836e233362657014007c92"
+  }
+  index: 0
+  text: "$+(l.name),\n\nDid you hear what that guy said back there?"
+  branches {
+    responseText: "Which guy? The corporate one or the creepy one?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "About Renraku? Yeah."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836e8a3362657014007c96"
+  }
+  index: 1
+  text: "{{GM}}He rolls his eyes at you and groans.{{/GM}}\n\nThe corporate guy, $+(l.name). The suit."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836eed3362657014007c99"
+  }
+  index: 2
+  text: "Now, I\'m no expert on magic by any means, but I know a connection when I see one."
+  branches {
+    responseText: "You think he\'s connected to your sister\'s passing?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836f3a3362657014007c9c"
+  }
+  index: 3
+  text: "Frag yeah, I do.\n\nCan\'t you see? That \'offering\' drek they were talking about is no doubt connected to whoever all-but-geeked my sis."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836fe43362657014007ca1"
+  }
+  index: 4
+  text: "What kind of coincidence is it that we run into Renraku, not once, but twice. We shouldn\'t have encountered anyone representing them the two times we were together."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_playerDidMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_playerDidMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548371273362657014007cd0"
+  }
+  index: 5
+  text: "Inside my sister\'s terminal, back at her apartments, when you encountered that sprite, did it say anything to you?"
+  branches {
+    responseText: "Yeah, something about \"returning essence to the master.\""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548371d13362657014007cd4"
+  }
+  index: 6
+  text: "When I went inside sis\' terminal back at her place, that sprite I encountered mentioned some weird drek about harvesting essence or...\n\nSomething."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548372453362657014007cd7"
+  }
+  index: 7
+  text: "See...\n\nThis what I\'m talking about there\'s no way in hell these two events aren\'t connected."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548372bf3362657014007cda"
+  }
+  index: 8
+  text: "But right now, we don\'t have any leads other what we now know.\n\nI plan to work on that when we get back to Sybrespace. Hopefully, my friends at Hacker House pull through."
+  branches {
+    responseText: "We can talk more back there. Let\'s get out of here."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836fcf3362657014007c9e"
+  }
+  index: 9
+  text: "What kind of coincidence is it that we run into Renraku, not once, but twice. We shouldn\'t have encountered anyone representing them the two times we were together."
+  branches {
+    responseText: "A fragging big one."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548370583362657014007ca4"
+  }
+  index: 10
+  text: "You got it, $+(l.name).\n\nThat suit has to be connected to sis\' digital death."
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548370913362657014007ca7"
+  }
+  index: 11
+  text: "You and I both heard them talking about \'offerings\' and other dark bulldrek...\n\nThere\'s zero doubt in my mind that those two fragheads aren\'t involved some larger conspiracy."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_playerDidMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_playerDidMatrix"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

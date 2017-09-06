@@ -1,0 +1,411 @@
+idRef {
+  id: "5481e7df336265a008007a5b"
+}
+ui_name: "z01-yaklab_surviva"
+nodes {
+  idRef {
+    id: "5481e81c336265a008007a61"
+  }
+  index: 0
+  text: "You are not one of these damned, deranged cultists.\n\nWho are you?"
+  branches {
+    responseText: "I\'m your get-out-of-drek-free card. Nice to meet you."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Not important. You haven\'t tried to kill me so I\'ll give you a chance."
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481e8ce336265a008007a64"
+  }
+  index: 1
+  text: "Glad that is the case. I\'m sure you are wondering why I\'m in here."
+  branches {
+    responseText: "Not really."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Yeah, I kind of am."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481edf7336265a008007a8d"
+  }
+  index: 2
+  text: "Understandable.\n\nPerhaps, you would like to be briefed?"
+  branches {
+    responseText: "Yeah, why don\'t you give me the details."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "Thanks, but no thanks, I\'ve got more goons to kill."
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ee6b336265a008007a92"
+  }
+  index: 3
+  text: "Very well then..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481e950336265a008007a68"
+  }
+  index: 4
+  text: "Everyone sent here to uhm... \"fix\" the problem has been killed.\n\nMy superiors need to know what is going on here."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481e9ad336265a008007a6b"
+  }
+  index: 5
+  text: "Which is why I have locked myself in this room and hid behind the equipment."
+  branches {
+    responseText: "Sounds cowardly."
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "What, were you expecting me?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Frankly, I don\'t care. Just go."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ea41336265a008007a71"
+  }
+  index: 6
+  text: "Perhaps you should read the Art of War, gaijin.\n\nI would expect a runner of all people to know when and how to pick their battles.\n\nBesides...."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481e9e8336265a008007a6f"
+  }
+  index: 7
+  text: "I knew it would be only a matter of time before the family bosses would send a more, say, formidable force to investigate.\n\nThere has been too much failure to expect otherwise."
+  branches {
+    responseText: "Why don\'t you tell what\'s going on here."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481eb27336265a008007a77"
+  }
+  index: 8
+  text: "There is not much I can tell beyond what you have already seen and experienced.\n\nWhat I can tell you, is what my team experienced before our demise."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481eb4d336265a008007a7a"
+  }
+  index: 9
+  text: "I was the third enforcement team sent here to \'reorganize\' the crew and its management.\n\nMy team consisted of myself, two others of no note, and a Shinto japanese shaman."
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ec39336265a008007a7d"
+  }
+  index: 10
+  text: "Upon our arrival to the outskirts of this facility, our shaman began experiencing, erhm, distress."
+  branches {
+    responseText: "Distress?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ec78336265a008007a80"
+  }
+  index: 11
+  text: "Yes, distress.\n\nShe began spouting some drivel about dark, shadowy spirits and their fingers caressing the place.\n\nTypical shaman drivel."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ecdb336265a008007a83"
+  }
+  index: 12
+  text: "Or so I thought, until I wound up in here and faking my death so to speak."
+  branches {
+    responseText: "Interesting. Well, we\'ll take it from here."
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "Thanks for the intel. Now go to your boss, so I can get paid."
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ed55336265a008007a87"
+  }
+  index: 13
+  text: "Of course, runner, I am in no condition to fight.\n\nMay you fight and die with honor."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5481f420336265a008007b07"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ed9a336265a008007a8a"
+  }
+  index: 14
+  text: "I\'ll make sure of it.\n\nA shame that this will cost me my sword hand."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5481f420336265a008007b07"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481ef6e336265a008007aa7"
+  }
+  index: 15
+  text: "Only a fool would reject counsel regarding the grits of a situation."
+  branches {
+    responseText: "I\'ve already figured out what\'s going on."
+    nextNodeIndex: 16
+  }
+  branches {
+    responseText: "Okay, wiseguy, counsel me."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481efc4336265a008007aaf"
+  }
+  index: 16
+  text: "Then I must depart at once.\n\nI must inform the family bosses of what is going in case you do not survive."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5481f420336265a008007b07"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481eec0336265a008007aa4"
+  }
+  index: 17
+  text: "Fine. Since you are here and you are not with those damn cultists or the delinquent staff, I can assume then, that we are on the same side."
+  branches {
+    responseText: ""
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5481f0c7336265a008007abe"
+  }
+  index: 18
+  text: "Perhaps, you would like to be briefed?"
+  branches {
+    responseText: "Yeah, why don\'t you give me the details."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Thanks, but no thanks, I\'ve got more goons to kill."
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

@@ -1,0 +1,102 @@
+accuracyMod: 5
+activationStatusEffects: {
+  durationFxScript: ""
+  fxScript: ""
+  is_buff: false
+  is_debuff: true
+  is_ignore_armor: false
+  is_totem: false
+  stackingCategory: "AI"
+  statusConditions: Condition_Confused
+  uirep: {
+    description: ""
+	icon: "icon_confusion"
+    name: "Confused"
+	thumbnail: ""
+  }
+}
+additional_anim_group: ItemType_None
+additionalTargets: -1
+affectsEnemy: false
+affectsFriendly: false
+ammoCost: 0
+anim_action: AnimAction_Null
+anim_modifier: AnimModifier_Null
+apCostMod: 0
+apDamageMod: 0
+attackRatingMod: 0
+can_summon: false
+canTargetActor: false
+canTargetOccupiedGridPoint: false
+canTargetSelf: false
+canTargetUnoccupiedGridPoint: false
+cooldown: 6
+cooldown_category: ""
+damageBucket: {
+  failureEntries: {
+    value: 1
+    weight: 0.5
+  }
+  failureEntries: {
+    value: 0.5
+    weight: 0.5
+  }
+  successEntries: {
+    value: 2
+    weight: 0.25
+  }
+  successEntries: {
+    value: 1.5
+    weight: 0.25
+  }
+  successEntries: {
+    value: 1
+    weight: 0.5
+  }
+}
+damageFunction: "buffTarget"
+damageType: VulnerabilityType_Normal
+defensiveAbility: false
+drainBucket: {
+  failureEntries: {
+    value: 0
+    weight: 0.66
+  }
+  failureEntries: {
+    value: -1
+    weight: 0.34
+  }
+  successEntries: {
+    value: 1
+    weight: 0.66
+  }
+  successEntries: {
+    value: 0
+    weight: 0.34
+  }
+}
+effectDuration: 2
+flushCover: false
+fxrep: {
+  actionFxName: "InteractionAction"
+  hitReactionFxName: "GenericSpellDeBuffHitReaction"
+  missReactionFxName: "GenericSpellMissReaction"
+  postActionFxName: ""
+  preActionFxName: ""
+}
+hpDamageMod: 0
+id: "ConfusionPulse"
+intended_user: IntendedUser_Player
+offensiveAbility: true
+override_item_targetting: false
+repetition: 1
+rpPenetrate: 0
+rpReduce: 0
+spreadAngle: 0
+toHitFunction: "actorSpellAttackToHit"
+uirep: {
+  description: "Temporarily confuse a target to fight for you with a targeted neuro pulse. Lasts 2 RNDs."
+  icon: "icon_confusion"
+  name: "Confusion Pulse"
+  thumbnail : ""
+}

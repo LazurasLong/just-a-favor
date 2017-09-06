@@ -1,0 +1,664 @@
+idRef {
+  id: "548a209f336265180c0063d0"
+}
+ui_name: "01-ranr-mob_simon"
+nodes {
+  idRef {
+    id: "548a20ad336265180c0063d6"
+  }
+  index: 0
+  text: "{{GM}}As the door finishes opening, you can tell the man is visibly startled.{{/GM}}\n\nWho the bloody hell are you, eh? And how\'d you get in?\n\n{{GM}}From his tone, you gather he is in charge of the group around him.{{/GM}}"
+  branches {
+    responseText: "Let\'s just say I have a way with doors."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{CC}}Charisma: 6{{/CC}} I\'m here on a maintenance call. What did you guys need fixed again?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 6
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcha"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "I\'m here to clean up garbage. That means I\'m going to kill scum like you."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a212f336265180c0063d9"
+  }
+  index: 1
+  text: "The bloody frag does that mean, mate? Answer my question or me Colt will answer it for you.\n\n{{GM}}He waves his SMG forcefully in you direction, now keeping it level on you.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Confusion{{/CC}} I have a way with people too."
+    conditions {
+      ops {
+        functionName: "OR"
+        args {
+          call_value {
+            functionName: "Evaluate If Actor Has Item"
+            args {
+              call_value {
+                functionName: "Specific Actor"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "HasOrHasNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Item)"
+                args {
+                  string_value: "Berlin_Spell Confusion"
+                }
+              }
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Evaluate If Actor Has Item"
+            args {
+              call_value {
+                functionName: "Specific Actor"
+                args {
+                  call_value {
+                    functionName: "Triggering Actor"
+                  }
+                }
+                args {
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "HasOrHasNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Map Item (Item)"
+                args {
+                  string_value: "Spell Confusion"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{GM}}Attack him.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_killedcrew"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548a37153362656403006496"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a28d1336265180c0063ef"
+  }
+  index: 2
+  text: "Before the man has a chance to react, you call upon the magical forces coursing through your veins and launch an astral attack on the man\'s mind.\n\nAs an unawakened, he is defenseless. Like a puppet master, you pull on his neurons like strings until he believes you belong here.\n\nAll in a matter of milliseconds..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Play Sound"
+      args {
+        call_value {
+          functionName: "Get Map Item (Sound)"
+          args {
+            string_value: "spellcasting"
+          }
+          args {
+            string_value: "MagicDebuffHit"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play FX on Actor"
+      args {
+        string_value: "Seattle:GenericSpellDeBuffHitReaction"
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "548a2a06336265180c0063f2"
+  }
+  index: 3
+  text: "{{GM}}He blinks heavily.{{/GM}}\n\nFriend, I do not know what came over m--"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a2f043362656403006402"
+  }
+  index: 4
+  text: "Boss!\n\nWhat\'s going on with you?"
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "548a2c9033626564030063e8"
+  }
+}
+nodes {
+  idRef {
+    id: "548a2f7f3362656403006405"
+  }
+  index: 5
+  text: "Nothing, Neils. \n\nThis man and his friends are our fraggin\' guests. You got a damn problem with that, mate?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a305f336265640300640b"
+  }
+  index: 6
+  text: "If you say so, boss, but what was all that earlier?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "548a2c9033626564030063e8"
+  }
+}
+nodes {
+  idRef {
+    id: "548a309a3362656403006411"
+  }
+  index: 7
+  text: "A simple misunderstanding.\n\nCome, friends, make yourself at home."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a30473362656403006408"
+  }
+  index: 8
+  text: "Nothing, Neils. \n\nThis woman and her friends are our fraggin\' guests. You got a problem, mate?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a218e336265180c0063dc"
+  }
+  index: 9
+  text: "{{GM}}He puts his hand on his chin for a moment.{{/GM}}\n\nYeah, the Don said something about that. You\'re here to fix the sweetheart, yeah?"
+  branches {
+    responseText: "Sweetheart?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "Of course."
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a221e336265180c0063e2"
+  }
+  index: 10
+  text: "Yeah, yeah, you know a sweetheart.\n\nIt\'s got a glitch in \'her\' persona chip. It\'s kind of funny, but the Don doesn\'t appreciate it.\n\n{{GM}}There\'s only few things that match that description. Your stomach churns at the thought.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a22a5336265180c0063e5"
+  }
+  index: 11
+  text: "Hope you won\'t try an\' do anything funny like our belated decker did.\n\nGeeked him myself I did. The Don really didn\'t appreciate his joke. At all.\n\nI hope you\'re not planning on doing something like that."
+  branches {
+    responseText: "I\'m just here to fix things."
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "What was the joke?"
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a2334336265180c0063e8"
+  }
+  index: 12
+  text: "Good, great to hear!\n\nNow, get up there and earn your nuyen."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a34dd3362656403006464"
+  }
+  index: 13
+  text: "Oh, you\'ll find out. I got a pretty chuckle outta it. Anyway, the sweetheart is upstairs.\n\nThe Don wants it fixed ASAP."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a2210336265180c0063df"
+  }
+  index: 14
+  text: "Alright! The sweetheart is upstairs. The Don needs it in working order as soon as possible.\n\n{{GM}}He waves his hand towards the staircase to your left.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a33d2336265640300645e"
+  }
+  index: 15
+  text: "{{GM}}He laughs and cocks his SMG.{{/GM}}\n\nWell, lookie here, boys. We got us some vigilantes. Let\'s show \'em what happens when you mess with the order of th\' sprawl."
+  branches {
+    responseText: ""
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548a345c3362656403006461"
+  }
+  index: 16
+  text: "You\'re dead, chummer!"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_killedcrew"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548a37153362656403006496"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "548a2c9033626564030063e8"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

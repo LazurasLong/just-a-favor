@@ -1,0 +1,40 @@
+unique_id: "ghamal_equipment_lvl2"
+equipment {
+  prefab_name: "TotemEagle"
+}
+equipment {
+  prefab_name: "Player_ShamanUrban"
+}
+equipment {
+  prefab_name: "Berlin_Spell Fog"
+}
+equipment {
+  prefab_name: "Bound Air Spirit 4"
+}
+equipment {
+  prefab_name: "Bound Nature Spirit 4"
+}
+equipment {
+  prefab_name: "HealthPack_med"
+}
+equipment {
+  prefab_name: "Grenade 1 (Flash)"
+}
+equipment {
+  prefab_name: "Bound Earth Spirit 3"
+}
+equipment {
+  prefab_name: "Bound Fire Spirit 3"
+}
+equipment {
+  prefab_name: "Spell Haste 3"
+}
+equipment {
+  prefab_name: "Sh 2 Mossberg CMDT"
+}
+equipment {
+  prefab_name: "Spell Flamethrower 2"
+}
+equipment {
+  prefab_name: "Spell Lightning Bolt 1"
+}

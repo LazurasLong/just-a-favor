@@ -1,0 +1,7 @@
+# For (in the future) dependency dl'er
+# Dirs
+autodl.d/
+
+# Leftbehind junks
+*.log
+

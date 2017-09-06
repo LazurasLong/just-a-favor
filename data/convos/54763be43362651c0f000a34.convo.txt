@@ -1,0 +1,490 @@
+idRef {
+  id: "54763be43362651c0f000a34"
+}
+ui_name: "00-apt-wiseman_FIN"
+nodes {
+  idRef {
+    id: "54763be93362651c0f000a3a"
+  }
+  index: 0
+  text: "What happened in there, $+(l.name)?"
+  branches {
+    responseText: "I encountered something nasty."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Your sister is dead."
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547644ef3362651c0f000b6b"
+  }
+  index: 1
+  text: "Like what?"
+  branches {
+    responseText: "A malicious sprite."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547645253362651c0f000b6e"
+  }
+  index: 2
+  text: "You\'re saying you found a damn Matrix spirit in my sister\'s local node?!"
+  branches {
+    responseText: "That\'s what I said. Makes since doesn\'t it? Renraku, freaky Matrix drek."
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547645a33362651c0f000b71"
+  }
+  index: 3
+  text: "Oh, man, we\'ve definitely just ran into what everyone just calls crazy decker stories.\n\nWhat about my sister, $+(l.name)?"
+  branches {
+    responseText: "Dead. The sprite said it took her \'essence\'."
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547645f23362651c0f000b74"
+  }
+  index: 4
+  text: "Fuck.\n\n{{GM}}He seems to take this news surprisingly well.{{/GM}}\n\nDid you salvage anything from it?"
+  branches {
+    responseText: "Got a code fragment. Want it?"
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547646933362651c0f000b77"
+  }
+  index: 5
+  text: "Yeah, I do."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547a6fa7336265d0100066f4"
+  }
+  index: 6
+  text: "I\'ll have my friends at Hacker House take a peek at this. I\'m going to find out who\'s behind this and unload my rifle down their throat."
+  branches {
+    responseText: "Hacker House? THE Hacker House?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "We just cost some suit their job. Let\'s get the frag outta here."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547a6fde336265d0100066f7"
+  }
+  index: 7
+  text: "You\'ve heard of them, yeah? Leetest bunch of deckers on the \'trix. If anyone can piece this together or lead me to the source, it\'s them."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547a70f6336265d0100066fe"
+  }
+  index: 8
+  text: "We should probably leave before we get a fat bounty on our heads."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547a71f3336265d010006701"
+  }
+  index: 9
+  text: "I need to put my sister to rest.\n\nIt shouldn\'t have ended like this, Raleigh...\n\n{{GM}}Wiseman aims his rifle at his comatose sister\'s chest.{{/GM}}"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Play Sound"
+        args {
+          call_value {
+            functionName: "Get Map Item (Sound)"
+            args {
+              string_value: "weapons"
+            }
+            args {
+              string_value: "AR"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Move Prop"
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "547644893362651c0f000b43"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specified Point (2D)"
+            args {
+              float_value: 23
+            }
+            args {
+              float_value: -32
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Waypoint on Prop"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PrimaryOrSecondary"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "546f718d336265b00b003f9c"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Remove Item from Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "00_cf_fragment"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547a707b336265d0100066fa"
+  }
+  index: 10
+  text: "Couldn\'t agree with you more, $+(l.name)."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547647703362651c0f000b7f"
+  }
+  index: 11
+  text: "{{GM}}Wiseman appears to take this news well. The only thing you can notice is the ice in his eyes.{{/GM}}\n\nFuck...\n\nI assume you found something in her local node, right?"
+  branches {
+    responseText: "Yeah, I found a semi-sentient entity, a sprite. Y\'know like a spirit."
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5476484f3362651c0f000b82"
+  }
+  index: 12
+  text: "Shit! Th-this is just like all the stories those \'out-there\' deckers would tell on Shadowland.\n\nTell me you got something?"
+  branches {
+    responseText: "Managed to cram this code fragment into my deck. Want it?"
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763bed3362651c0f000a3d"
+  }
+  index: 13
+  text: "Oh, man..."
+  branches {
+    responseText: "What happened in there?"
+    nextNodeIndex: 14
+  }
+  branches {
+    responseText: "What did you find?"
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "You look like you\'ve just seen a ghost."
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "547640453362651c0f000a69"
+  }
+  index: 14
+  text: "A fight, a fight with the Matrix\'s equivalent of free spirits. The damn thing pretty much killed my sister. For all intents and purposes, she\'s dead."
+  branches {
+    responseText: ""
+    nextNodeIndex: 18
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763d1e3362651c0f000a47"
+  }
+  index: 15
+  text: "I found a damn entity inside Raleigh\'s local node."
+  branches {
+    responseText: ""
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763de33362651c0f000a4a"
+  }
+  index: 16
+  text: "Packed a punch, the damn fucker did. I know what\'s happened to my sister now. There\'s nothing we can do for her."
+  branches {
+    responseText: "Entity?"
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763e2e3362651c0f000a4f"
+  }
+  index: 17
+  text: "A fucking complex form, a sprite, a semi-sentient program in the Matrix. It ripped the consciousness right out of her!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763e6f3362651c0f000a52"
+  }
+  index: 18
+  text: "I have a feeling our boys in red were after it, or; more likely, were after whoever its master may have been."
+  branches {
+    responseText: ""
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763f8d3362651c0f000a60"
+  }
+  index: 19
+  text: "I managed to recover a fragment of its code.\n\nI\'ll have my friends at Hacker House take a peek at this. I\'m going to find out who\'s behind this and unload my rifle down their throat."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763c713362651c0f000a42"
+  }
+  index: 20
+  text: "Believe it or not, $+(l.name), you\'re spot on.\n\n{{GM}}He wipes some sweat off his brow before continuing.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763cb03362651c0f000a45"
+  }
+  index: 21
+  text: "We\'ve just stumbled into something big. Real big, and I now have an idea what exactly went down with my sister."
+  branches {
+    responseText: ""
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54763e2e3362651c0f000a4f"
+  }
+  index: 22
+  text: "A fucking complex form, a sprite, a semi-sentient program in the Matrix. It ripped the consciousness right out of her!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 18
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (bool)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "00_apartments_playerDidMatrix"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Evaluate Tag for Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HasOrHasNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SenseTagList)"
+          args {
+            string_value: "matrix_enterer"
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 13
+}

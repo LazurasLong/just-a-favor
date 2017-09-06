@@ -1,0 +1,339 @@
+idRef {
+  id: "5463ce643362657013004949"
+}
+ui_name: "00-apt-body_inspect"
+nodes {
+  idRef {
+    id: "5463ce69336265701300494f"
+  }
+  index: 0
+  text: "It\'s Wiseman\'s sister. She isn\'t dead but appears to be unconscious with irregular breathing."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5465475a336265e81600125b"
+  }
+  index: 1
+  text: "Ra-Raleigh?\n\nCan you hear me?"
+  branches {
+    responseText: "{{GM}}Inspect her body closer.{{/GM}}"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "5463d25e336265701300495d"
+    }
+  }
+  branches {
+    responseText: "{{GM}}Inspect the terminal.{{/GM}}"
+    nextNodeIndex: 4
+    onlyOnce: true
+    idRef {
+      id: "5463d262336265701300495e"
+    }
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "545ea2f7336265f82200330c"
+  }
+}
+nodes {
+  idRef {
+    id: "5463d0713362657013004952"
+  }
+  index: 2
+  text: "As you look closer, you can see her DataJack is still connected to the terminal. It would probably be a bad idea to unplug it given that she is still alive albeit barely."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "54654869336265e81600126f"
+  }
+  index: 3
+  text: "She\'s still alive..."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "545ea2f7336265f82200330c"
+  }
+}
+nodes {
+  idRef {
+    id: "5463d2c33362657013004960"
+  }
+  index: 4
+  text: "You look closer at Raleigh\'s terminal.\n\nIt\'s the login screen for a massive multiplayer online game, The Shadow World. You\'ve never played it, but have heard of it. Most curious, how could a game harm someone."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+    }
+    nextNodeIndex: 0
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "dlg_inspectionsdone"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5463d4363362657013004971"
+  }
+  index: 5
+  text: "Whatever the case may be, it is clear to you that something here is wrong.\n\nYou hear commotion and gunshots in the hallway.\n"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Play Sound"
+        args {
+          call_value {
+            functionName: "Get Map Item (Sound)"
+            args {
+              string_value: "weapons"
+            }
+            args {
+              string_value: "AR"
+            }
+          }
+        }
+        args {
+          float_value: 0.75
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "546548f4336265e816001279"
+  }
+  index: 6
+  text: "$+(l.name)! We\'ve got company, and they don\'t seem friendly."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5463d4fe3362657013004988"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "545ea2f7336265f82200330c"
+  }
+}
+roots {
+  nextNodeIndex: 0
+}

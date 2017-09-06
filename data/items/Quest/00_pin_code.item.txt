@@ -1,0 +1,8 @@
+id: "00_pin_code"
+type: ItemType_QuestItem
+uirep {
+  name: "Scribbled Note"
+  description: "A quickly scribbled note given to you Mr. Vnevoski.\n\n[ 98012 - V ]"
+}
+credentials: 0
+sorting_group: "Quest"

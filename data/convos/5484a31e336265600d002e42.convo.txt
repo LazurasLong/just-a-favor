@@ -1,0 +1,720 @@
+idRef {
+  id: "5484a31e336265600d002e42"
+}
+ui_name: "z01-syb_mrs_fuchi"
+nodes {
+  idRef {
+    id: "5484a336336265600d002e48"
+  }
+  index: 0
+  text: "Nice to you meet you, I\'m Misses Johnson.\n\nIt\'s certainly much nicer up here than downstairs, don\'t you agree?"
+  branches {
+    responseText: "I prefer the hard bass they have going downstairs."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Nice to meet you, I\'m Mr. Smith."
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "smith"
+            }
+          }
+        }
+        args {
+          string_value: "Mister Smith"
+        }
+      }
+    }
+    nextNodeIndex: 20
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Nice to meet you, I\'m Ms. Smith."
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "smith"
+            }
+          }
+        }
+        args {
+          string_value: "Miss Smith"
+        }
+      }
+    }
+    nextNodeIndex: 20
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Let\'s cut to the chase, shall we?"
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a42a336265600d002e4e"
+  }
+  index: 1
+  text: "To each their own, I guess.\n\nLet us get to business then..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a4ea336265600d002e55"
+  }
+  index: 2
+  text: "My backers have recently become victims of a smash-n-grab.\n\nOfficially, we have attributed the loss to one of the many drug-crazed vandals that lurk the sprawl."
+  branches {
+    responseText: "Unofficially?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a592336265600d002e58"
+  }
+  index: 3
+  text: "{{GM}}She smirks.{{/GM}}\n\nThat is where it gets a little more complicated. These \"vandals\" were in fact highly-skilled individuals like that of yourself."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a630336265600d002e5b"
+  }
+  index: 4
+  text: "From what we were able to discern, this team managed to make off with a schematic of one our experimental prototype cyberdecks.\n\nWe believe they were hired and are still currently being funded by a start-up here in the Seattle area."
+  branches {
+    responseText: "A start-up?"
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "So basically, paydata re-retreival."
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a735336265600d002e5f"
+  }
+  index: 5
+  text: "Yes.\n\nAnyone one with sufficient money and/or background can start their own corporation. You just have to resort to cut-throat tactics..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a778336265600d002e62"
+  }
+  index: 6
+  text: "Which usually result in someone, in this case us, hiring someone, like you, to put them out of business.\n\nWe want to you to retrieve the stolen data and naturally send a message."
+  branches {
+    responseText: "Sounds good so far, but I need details like, Target and Pay."
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a8be336265600d002e85"
+  }
+  index: 7
+  text: "Your target is Ranier Innovations located in Kent, Tacoma. You will need a set of SINs for your crew to enter the area protected by Lone Star."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484cc133362657c02001e43"
+  }
+  index: 8
+  text: "I can provide you and your team a set of rather nice SINs for only \302\2452,000 a piece."
+  branches {
+    responseText: "{{CC}}Item: SIN{{/GM}} I already got one. Give me three."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "SIN_gotRusty"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Give me the four for the entire crew."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "SIN_gotRusty"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484ccef3362657c02001e47"
+  }
+  index: 9
+  text: "One moment..."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 6000
+        }
+      }
+    }
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484cd593362657c02001e51"
+  }
+  index: 10
+  text: "You do not have enough nuyen."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5484cdf03362657c02001e57"
+  }
+  index: 11
+  text: "Here you go."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 6000
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5484ce7c3362657c02001e5d"
+  }
+  index: 12
+  text: "As far as payment is concerned, here are two Fuchi VirtuaX cyberdecks, brand new that you may exchange for supplies."
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484cf2e3362657c02001e60"
+  }
+  index: 13
+  text: "Ranier Innovations, to our knowledge, has stolen classified materials from other corporations. The only data of concern to us is our product.\n\nEverything else IS fair game."
+  branches {
+    responseText: "So a bunch of paydata and some hardware, that\'s it?"
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484cfbe3362657c02001e63"
+  }
+  index: 14
+  text: "They are in possession of a minutia of high-value data. This, for your kind, is the big haul."
+  branches {
+    responseText: "Fine, I\'ll take the job."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484d0113362657c02001e66"
+  }
+  index: 15
+  text: "Excellent!"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Add Item to Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Berlin_CyberdeckVirtuaX"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Add Item to Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "Berlin_CyberdeckVirtuaX"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548511e23362650821001f78"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484ccf33362657c02001e49"
+  }
+  index: 16
+  text: "One moment..."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 4
+            }
+          }
+        }
+        args {
+          int_value: 8000
+        }
+      }
+    }
+    nextNodeIndex: 17
+  }
+  branches {
+    responseText: ""
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484cdbd3362657c02001e54"
+  }
+  index: 17
+  text: "You do not have enough nuyen."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5484ce0f3362657c02001e59"
+  }
+  index: 18
+  text: "Here you go."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 8000
+      }
+    }
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "01b_sin_unisex"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5484a80a336265600d002e64"
+  }
+  index: 19
+  text: "In essence, yes; however, we would like for you to send a message as well. Although acts like these are inevitable, it is still important that others know of the price that must be paid."
+  branches {
+    responseText: "Sounds good so far, but I need details like, Target and Pay."
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484a4ac336265600d002e50"
+  }
+  index: 20
+  text: "A pleasure it is, $(scene.smith).\n\nShall we get to business?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548512b53362650821002029"
+  }
+  index: 21
+  text: "Is there a reason you\'re still bothering me?\n\n{{GM}}This lady could not be any more snobbish right now.{{/GM}}\n\nGo do your job. We are waiting."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "SIDEMIS_stage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "SIDEMIS_stage"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  nextNodeIndex: 21
+}

@@ -1,0 +1,515 @@
+idRef {
+  id: "5480cb6c33626590130039c5"
+}
+ui_name: "z01-yaklab_striphw"
+nodes {
+  idRef {
+    id: "5480cba033626590130039cb"
+  }
+  index: 0
+  text: "Hoi, chummer, bad time for you to come to the neighborhood."
+  branches {
+    responseText: "What\'cha mean by that?"
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "That a threat, slotface?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480cc6633626590130039d1"
+  }
+  index: 1
+  text: "Weird drek, omae. I mean weird. Ya see, we Halloweeners push the yaks\' BTL they push out. Y\'know like a sample market."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480cde033626590130039da"
+  }
+  index: 2
+  text: "Thing is that the latest batch has been bad for business. Like, killed all your clientelle and turned \'em into ghouls bad.\n\nReal fraggin\' business."
+  branches {
+    responseText: "Is that even possible?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480ce7133626590130039dd"
+  }
+  index: 3
+  text: "Hell the fuck no. Or at least, it shouldn\'t be.\n\nSee, word on the streets is that the yaks\' lab got put into new management. The punks working there seem to like it."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480cf6e33626590130039e0"
+  }
+  index: 4
+  text: "At least,\n\nThat\'s what I hear in our strip joint when they come and blow their nuyen."
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} Wanna make a name for yourself, chummer? My team here is about restore law & order \'round here. Could use you."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "Thanks for the scoop."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480d09f33626590130039e8"
+  }
+  index: 5
+  text: "No drek?\n\nLet\'s go then. Watch duty is piss boring."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5480d4083362659013003a3f"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480d03233626590130039e4"
+  }
+  index: 6
+  text: "No problem. We gotta keep this strip joint running. Come by later. We got some sick girls."
+  branches {
+    responseText: "Okay."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "striphw_talkenabled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'ll take you up on that."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "striphw_talkenabled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480cbde33626590130039cf"
+  }
+  index: 7
+  text: "What? Do I look like I\'m any kind o\' drek to you? Fuck, I ain\'t cut out to deal with a team of heavily armed runners all by my lonesome."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480ccd233626590130039d4"
+  }
+  index: 8
+  text: "Besides you\'re all like celebrities to us here in the Barrens.\n\nHeh... unless you\'re crossin\' us, which isn\'t tonight."
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/GM}} Tonight\'s your chance to hit it big then, chummer. We\'re on a run an\' could use the extra hand. What say you?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "What are you doing out here?"
+    nextNodeIndex: 10
+  }
+  branches {
+    responseText: "I got important drek to handle. Later."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "striphw_talkenabled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480cd6a33626590130039d7"
+  }
+  index: 9
+  text: "Respect. \n\nYeah! Let\'s do this!"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5480d4083362659013003a3f"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480d0e333626590130039ed"
+  }
+  index: 10
+  text: "Keepin\' watch. Gotta keep the strip joint safe from these chipheads gone ghoul.\n\nThis shotgun here will do me right."
+  branches {
+    responseText: "\"Chipheads gone ghoul?\""
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480d1913362659013003a0f"
+  }
+  index: 11
+  text: "You heard me.\n\nThe latest batch of BTL we were given to push by the yaks has turned every chiphead into ghouls."
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5480d27b3362659013003a12"
+  }
+  index: 12
+  text: "Don\'t know how it\'s possible for chips to do that, but whatever.\n\nDrek\'s been getting weirder and weirder since those worker-punks came bragging about their pay raise."
+  branches {
+    responseText: "{{CC}}Etiquette: Gang{{/CC}} The strip joint will be fine, omae. Why don\'t you come with me and make a name for yourself."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 15
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Catch you later."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "striphw_talkenabled"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}

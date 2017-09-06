@@ -1,0 +1,426 @@
+idRef {
+  id: "548b90f9336265100d003931"
+}
+ui_name: "01-ranr-bunraku1"
+nodes {
+  idRef {
+    id: "548b9120336265100d003937"
+  }
+  index: 0
+  text: "The elvish bunraku before you has a massive black eye from what seems to have been a prior incident, in addition to the wounds you have just given her.\n\nThe Irish Mafia don\'s personal bunraku... \n\nIf you were to help him misplace it to the right people, you should be able to instant-brew a conflict that may help divert any eyes from the current run."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "548b92c0336265100d00393a"
+  }
+  index: 1
+  text: "Master, I have experienced an error...\n\n{{GM}}The elf bunraku\'s voice cracks in ways that shouldn\'t be possible for organic vocal chords.{{/GM}}\n\nOh, I remember what a naughty $(l.guy) you\'ve been...\n\n{{GM}}You begin to hear an odd sound.{{/GM}}"
+  branches {
+    responseText: "{{CC}}Decking: 4{{/CC}} Change the active simsense in the bunraku\'s head."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 5
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{GM}}Look at the team Decker{{/GM}} Change this drek fast, omae! Who\'s idea was an aggressive, dominant bunraku?!"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "deckerIsPlayer"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548b9663336265100d003946"
+  }
+  index: 2
+  text: "You manage to link your cyberdeck to the bunraku\'s datajack port.\n\nWith a few swift clicks on your deck, you manage to reset her active simsense."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "548b974c336265100d003949"
+  }
+  index: 3
+  text: "{{GM}}Fortunately, the bunraku has been reset.{{/GM}}\n\nYour pleasure is my command, master.\n\nWould like me to list my available personalities?"
+  branches {
+    responseText: "That won\'t be necessary. Follow me."
+    actions {
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Variable (int)"
+            args {
+              string_value: "mob_bunrakustate"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
+      ops {
+        functionName: "Change Actor Team"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Triggering Target Actor"
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (string)"
+            args {
+              string_value: "FactionList"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (SceneDimension)"
+            args {
+              string_value: "Default"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_takebunraku"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548b94e7336265100d00393e"
+  }
+  index: 4
+  text: "{{GM}}$+(s.name) struggles to hook his cyberdeck into the bunraku\'s datajack port.{{/GM}}\n\nHold on, $+(l.name)! I\'ll get this drek handled as fast I can!"
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcha"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcha"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isDecker"
+}
+nodes {
+  idRef {
+    id: "548b9586336265100d003941"
+  }
+  index: 5
+  text: "No wonder why they geeked their decker. This drek\'s not funny at all.\n\n{{GM}}$+(s.name) finishes altering the bunraku\'s programming.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isDecker"
+}
+nodes {
+  idRef {
+    id: "548b960d336265100d003944"
+  }
+  index: 6
+  text: "Who the hell would do this? I mean if you\'re into this sort of thing I guess; but man, this drek ain\'t cool.\n\n{{GM}}$+(s.name) finishes altering the bunraku\'s programming.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isDecker"
+}
+nodes {
+  idRef {
+    id: "548b9907336265100d003980"
+  }
+  index: 7
+  text: "Yes, master, how may I pleasure you today?"
+  branches {
+    responseText: "What \'features\' do you have installed?"
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "You can pleasure me by shutting the frag up and following me."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f0cdc3362650808006d2f"
+  }
+  index: 8
+  text: "In addition to many suitable personalities for whatever your fancy is, master, I am also equipped with a Fuchi BOTNET-series locator beacon in the event of theft.\n\nMy memory banks show that you had this personally installed for me master."
+  branches {
+    responseText: "I don\'t like to talk about that. Please refrain from mentioning it to me ever again."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f0e193362650808006d32"
+  }
+  index: 9
+  text: "Certainly, master, I am logging your preference."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "mob_bunrakustate"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "mob_bunrakustate"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  nextNodeIndex: 7
+}

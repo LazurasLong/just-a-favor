@@ -1,0 +1,81 @@
+idRef {
+  id: "547376fc336265dc17001e2a"
+}
+ui_name: "00-apt-rusty"
+nodes {
+  idRef {
+    id: "5473770b336265dc17001e30"
+  }
+  index: 0
+  text: "What the hell do you people want now? Is it more money?\n\nHaven\'t you damn scumbags already extorted enough money from me?!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54737761336265dc17001e33"
+  }
+  index: 1
+  text: "Oh, dear. When my wife finds out about this, sh-she\'ll..."
+  branches {
+    responseText: "{{GM}}Quickly inject the drug into his neck.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54737820336265dc17001e40"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{GM}}Walk away.{{/GM}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

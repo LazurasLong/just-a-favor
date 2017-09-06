@@ -1,0 +1,414 @@
+idRef {
+  id: "54652227336265d00a000125"
+}
+ui_name: "00-syb-wiseman_s0"
+nodes {
+  idRef {
+    id: "54652242336265d00a00012b"
+  }
+  index: 0
+  text: "$+(l.name), I\'m glad you made it."
+  branches {
+    responseText: "Null sweat, Wiseman, it\'s the least I could do."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "What do you need Wiseman?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546522d7336265d00a00012f"
+  }
+  index: 1
+  text: "And I thank you...\n\nYou\'ve been a good friend."
+  branches {
+    responseText: "It\'s what friends are for."
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "There\'s no such things as friends in our line of work."
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652371336265d00a000135"
+  }
+  index: 2
+  text: "Allow to me to rephrase, then, a good contact...\n\nI still appreciate your effort to maintain a, say, working relationship."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546523d9336265d00a000137"
+  }
+  index: 3
+  text: "{{GM}}Wiseman\'s typical calm demeanor slowly vanishes before your very eyes.{{/GM}}\n\nI\'m in need of a favor. A favor from you."
+  branches {
+    responseText: "You know I don\'t do favors for free."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "In other words, a job. What is it and what\'s the pay?"
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "I am not sleeping with you, Wiseman."
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546524d1336265d00a00013e"
+  }
+  index: 4
+  text: "And I\'m not asking you to, $+(l.name)."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546524f8336265d00a000141"
+  }
+  index: 5
+  text: "I need to you accompany me to the Tenpenny Tenements in the neighborhood of Ravenna here in Seattle.\n\nI\'ll pay you 2,000 nuyen to come along."
+  branches {
+    responseText: "2,000? For a field trip? What aren\'t you telling me?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "Sounds good to me. Why do you need me?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5465290b336265d00a000157"
+  }
+  index: 6
+  text: "Field trip? Come on, $+(l.name), you of all people know there\'s no such thing as a field trip in our line of work.\n\nBut I\'m not asking you on a run, this is a matter more personal."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546529d1336265d00a00015a"
+  }
+  index: 7
+  text: "It\'s my sister, $+(l.name), I haven\'t been able to get a hold of her lately.\n\nI\'m a decker for big D\'s sake, I know how to keep tabs on people."
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652a8b336265d00a00015d"
+  }
+  index: 8
+  text: "I\'m really worried about her. She... She could be dead, and if that\'s the case, I wanna find out what happened before the trail goes cold. "
+  branches {
+    responseText: "{{CC}}Etiquette: Shadowrunner{{/CC}} This sounds like a run to me, omae. Make it \302\2453000 and you got yourself an extra runner."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 17
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "firstmission_get3k"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
+  }
+  branches {
+    responseText: "Okay, Wiseman, you got yourself some backup. When do we leave?"
+    nextNodeIndex: 11
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652d14336265d00a000170"
+  }
+  index: 9
+  text: "Fine, fine, fine. If that\'s what it\'ll cost for somebody I can trust, then we got a deal."
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652d76336265d00a000174"
+  }
+  index: 10
+  text: "Meet me outside the club when you\'re ready to leave."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54653ad33362653c15005d83"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652cd2336265d00a00016e"
+  }
+  index: 11
+  text: "As soon as possible, $+(l.name). Meet me outside the club when you\'re ready to leave."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "54653ad33362653c15005d83"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652867336265d00a000155"
+  }
+  index: 12
+  text: "Because nothing is safe, not alone. You might call it paranoia, but I call it survival instinct."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546526fb336265d00a000149"
+  }
+  index: 13
+  text: "I\'m looking to hire you. I need someone to watch my back. Someone I can at least somewhat trust."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54652655336265d00a000147"
+  }
+  index: 14
+  text: "{{GM}}Wiseman chuckles at your remark, although you can catch the slight hint of a blush.{{/GM}}\n\nN-No, No, that\'s not at all what I\'m implying, $+(l.name)."
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

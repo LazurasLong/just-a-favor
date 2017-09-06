@@ -1,0 +1,323 @@
+idRef {
+  id: "5486075b336265301e002d14"
+}
+ui_name: "01-ranr-punk"
+nodes {
+  idRef {
+    id: "54860765336265301e002d1a"
+  }
+  index: 0
+  text: "Yo!\n\nWhat\'s cooking? You trying to get somethin\'?"
+  branches {
+    responseText: "Yeah. Some information."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "gotinfofrompunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "No. I thought you were someone else."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548607ce336265301e002d21"
+  }
+  index: 1
+  text: "Huh? My doc say\'s I got a case of drek-brains. I don\'t know anything nor do I think anything."
+  branches {
+    responseText: "{{CC}}\302\245100{{/CC}} Will this cure your \"drek-brains\"?"
+    conditions {
+      ops {
+        functionName: "Evaluate Nuyen"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 100
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "{{CC}}Strength: 4{{/CC}} How\'s about I give you some old-fashioned medicine?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "Later, loser."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54860842336265301e002d24"
+  }
+  index: 2
+  text: "Well, would you look at that? Yeah, my doc said I was cured yesterday. Imagine!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Remove Nuyen"
+      args {
+        int_value: 100
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "54860865336265301e002d27"
+  }
+  index: 3
+  text: "Fire me up."
+  branches {
+    responseText: "Know the scoop on this area?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I\'m looking to cause a scene."
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54860960336265301e002d31"
+  }
+  index: 4
+  text: "Well... There\'s a lot of things that go on here...\n\n{{GM}}He eyes you up and down.{{/GM}}\n\nI guess you\'re into the more gritty, violent stuff going on."
+  branches {
+    responseText: "Yeah, you could say that."
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548609ae336265301e002d34"
+  }
+  index: 5
+  text: "Okay, okay.\n\nAnyone here in Tacoma knows about the little blood feud going on in between the Irish Mafia and the Yaks.\n\nI hear things are getting real hot, they are. Probably just need the right catalyst if you know what I\'m saying."
+  branches {
+    responseText: "Wiz. Thanks for the info."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "gotinfofrompunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54860894336265301e002d2b"
+  }
+  index: 6
+  text: "A scene? Well, that should be no problem!\n\nYa see, this is Tacoma. Anyone here knows that the Irish mob and the Yakuza are at each others\' throats.\n\nI bet you could fire something off real easily."
+  branches {
+    responseText: "Wiz. Thanks for the info."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "gotinfofrompunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5486092a336265301e002d2f"
+  }
+  index: 7
+  text: "Whoa! Easy, pal. I was just joshing you! Wha-What do you need?"
+  branches {
+    responseText: "Tell me where I can start some trouble. Right now."
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54860b45336265301e002d39"
+  }
+  index: 8
+  text: "Alright! Alright!\n\nYou could just start... I dunno... a mob war or something!\n\nBoth the Irish mafia and the Yakuza got interests here. And they both hate the drek out each other."
+  branches {
+    responseText: "Pathetic."
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "gotinfofrompunk"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548607b8336265301e002d1e"
+  }
+  index: 9
+  text: "Whatever."
+  branches {
+    responseText: ""
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

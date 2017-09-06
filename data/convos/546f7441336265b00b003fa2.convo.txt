@@ -1,0 +1,77 @@
+idRef {
+  id: "546f7441336265b00b003fa2"
+}
+ui_name: "00-apt-xelsprite"
+nodes {
+  idRef {
+    id: "546f74b1336265b00b003fa8"
+  }
+  index: 0
+  text: "The circuit, it does not respond. The catalyst for essence cannot be returned to the master..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "546f754e336265b00b003fab"
+  }
+  index: 1
+  text: "{{GM}}The complex form ahead of you takes notice of your presence.{{/GM}}\n\nAnother... The essence shall be doubled. Master has merely belayed my exit.\n\nYour energy from you I will extract, unawakened."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "546f76b5336265b00b003fbd"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

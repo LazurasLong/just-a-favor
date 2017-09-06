@@ -1,0 +1,247 @@
+idRef {
+  id: "548f2f28336265f000002912"
+}
+ui_name: "01-ranr-divcutscene"
+nodes {
+  idRef {
+    id: "548f2f3a336265f000002918"
+  }
+  index: 0
+  text: "Makuda! YOU SON OF A BITCH!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f2f4b336265f00000291b"
+  }
+  index: 1
+  text: "Did you think I wouldn\'t notice? Did you think I wouldn\'t know?\n\nI had a tracker in my darling! I knew you fragging gooks took it!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f3b44336265f00000292e"
+  }
+  index: 2
+  text: "You stupid, fat gloat...\n\nYou accuse me of stealing from you?"
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_killedcrew"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcf"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "mob_simon_usedcha"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "548f2c99336265f00000290e"
+  }
+}
+nodes {
+  idRef {
+    id: "548f3bb7336265f000002932"
+  }
+  index: 3
+  text: "I do, mate, I do.\n\nYou think you can just have one of your boys run into my place, steal me woman, and kill all m\' men. Well, you got another thing coming to you."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f3c29336265f000002935"
+  }
+  index: 4
+  text: "I will not suffer from your insolence, piggu.\n\nIt is war then. I will enjoy gutting you."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Enable/Disable Trigger"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "EnableOrDisable"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "548f3f0a336265f00000295a"
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Send Event"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "DiversionCutsceneStartBattle"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "548f2c99336265f00000290e"
+  }
+}
+nodes {
+  idRef {
+    id: "548f3c89336265f000002938"
+  }
+  index: 5
+  text: "I do, mate, I do.\n\nYou think you can just have one of your witchcraft-usin\' mages convince my boys that I let you have me woman. Well, you got another thing coming to you."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "548f3d79336265f00000293f"
+  }
+  index: 6
+  text: "I do, mate, I do.\n\nYou think you can just have one of those dam\' smooth-talkin\' con men convince my boys that I let you have me woman. Well, you got another thing coming to you."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

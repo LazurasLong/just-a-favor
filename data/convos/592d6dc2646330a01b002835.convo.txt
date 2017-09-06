@@ -1,0 +1,251 @@
+idRef {
+  id: "592d6dc2646330a01b002835"
+}
+ui_name: "00-syb-shell_s0"
+nodes {
+  idRef {
+    id: "592d6dd8646330a01b00283b"
+  }
+  index: 0
+  text: "Ayo, $+(l.name), y\'hear about Wiseman?\n\n{{GM}}She puts her left hand on hip while steadily puffing on what you smell to be a driftweed blunt.{{/GM}}\n{{GM}}She\'s steadily tapping her foot. Oh well, Shell\'s never been one for patience.{{/GM}}"
+  branches {
+    responseText: "Not every day\'s a party for some of us, Shell."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "I did. It\'s why I\'m here."
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "Hey, girl, how you\'ve been?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Gender"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Gender"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 3
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Let\'s go!"
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "592d7b3e646330a01b002894"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "592d6efe646330a01b00286b"
+  }
+  index: 1
+  text: "Aye, you just cant handle your drek. It\'s all null though, baby.\n\nWiseman needs our help. He ain\'t got the street smarts like we, omae. We gotta goes talk to him.\n\n{{GM}}That last sentence rolls of her tongue in an almost demanding tone.{{/GM}}"
+  branches {
+    responseText: "You know what they say: Time is Nuyen. Let\'s go!"
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "592d7b3e646330a01b002894"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "592d75db646330a01b002871"
+  }
+  index: 2
+  text: "{{GM}}She jerks her body, blowing a huge cloud your way.{{/GM}}\n\nTime is money, $+(l.name)! You know Wiseman has gotta lotta nuyen. Let\'s go get it!."
+  branches {
+    responseText: "Bet."
+    actions {
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "592d7b3e646330a01b002894"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "592d78a7646330a01b002879"
+  }
+  index: 3
+  text: "{{GM}}She winks at you and takes big drag off her stick. The pungent smoke bellows out of her mouth while she speaks.{{/GM}}\n\nI\'ve been doing nova-wiz here lately. Nuyen\'s flowing like the drinks in VIP. It ain\'t hard find work that\'s for sure..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "592d7991646330a01b00287c"
+  }
+  index: 4
+  text: "{{GM}}The next smoke ring she blows before her next words, it is heart shaped. You don\'t even want to know how she did that....{{/GM}}\n\nAnyways, love..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

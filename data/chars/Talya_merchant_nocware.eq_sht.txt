@@ -1,0 +1,37 @@
+unique_id: "Talya_merchant_nocware"
+equipment {
+  prefab_name: "Outfit_Scientist"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack"
+}
+equipment {
+  prefab_name: "HealthPack_med"
+}
+equipment {
+  prefab_name: "HealthPack_med"
+}
+equipment {
+  prefab_name: "HealthPack_hi"
+}
+equipment {
+  prefab_name: "HealthPack_hi"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}

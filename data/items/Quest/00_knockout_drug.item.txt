@@ -1,0 +1,11 @@
+id: "00_knockout_drug"
+type: ItemType_QuestItem
+uirep {
+  name: "\"Date Rape\" Drug"
+  description: "A popular \"date rape\" drug in crystalline form, ready to be dissolved in a liquid whether it be someone\'s drink or a ready-made injectable solution.\n\nThis might come in handy..."
+}
+credentials: 0
+sorting_group: "Quest"
+closeupImage {
+  filename: "secretlab/secretlab_clutter_crystals_s"
+}
