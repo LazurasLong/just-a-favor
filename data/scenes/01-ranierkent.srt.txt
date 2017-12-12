@@ -5023,6 +5023,50 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5a16e1ab333165b02500570b"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Activate Actor Spawner"
       args {
         call_value {
@@ -5147,6 +5191,117 @@ triggers {
   isActive: true
   idRef {
     id: "548f2571336265540d006b8a"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "DiversionCutscene_HandleAnolis"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "598eaac36463303420006bd1"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Kill Actor"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "593ef56a6463305813002f0d"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "DeathMethod"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5a16e1ab333165b02500570b"
   }
   elseActions {
   }
@@ -7663,6 +7818,20 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (string)"
+      args {
+        call_value {
+          functionName: "Get Variable (string)"
+          args {
+            string_value: "anolis_status"
+          }
+        }
+      }
+      args {
+        string_value: "begin"
+      }
+    }
   }
   isActive: true
   idRef {
@@ -8399,6 +8568,142 @@ triggers {
   elseActions {
   }
   is_oneshot: true
+}
+triggers {
+  name: "Sewers_enterSewers"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5a2fe054333165042a000ee4"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Fade Camera Out"
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0
+      }
+    }
+    ops {
+      functionName: "Add Camera Point of Interest (Actors)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+    ops {
+      functionName: "Teleport Actor"
+      args {
+        call_value {
+          functionName: "All Actors on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Point Within Region"
+          args {
+            call_value {
+              functionName: "Get Map Item (Region)"
+              args {
+                string_value: "5a2fe012333165042a000ee2"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TeleportMethod"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Fade Camera In"
+      args {
+        float_value: 0.5
+      }
+      args {
+        float_value: 0.5
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5a2fdfce333165042a000ee1"
+  }
+  elseActions {
+  }
+  is_oneshot: false
 }
 regions {
   name: "Camera-EXTERIOR"
@@ -9817,6 +10122,52 @@ regions {
     r: 0.37254903
     g: 0.50196081
     b: 0.36862746
+    a: 1
+  }
+  ambience_template: "sewer-busy"
+  combat_music: ""
+  default_music: "Berlin-Set9-Stealth"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+}
+regions {
+  name: "AnolisSQ_TPZone"
+  position {
+    x: 62
+    y: 166
+    width: -5
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5a2fe012333165042a000ee2"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
     a: 1
   }
   ambience_template: ""
@@ -13655,6 +14006,74 @@ characters {
   idRef {
     id: "593ef56a6463305813002f0d"
   }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "AND"
+        args {
+          call_value {
+            functionName: "Comparison (string)"
+            args {
+              call_value {
+                functionName: "Get Variable (string)"
+                args {
+                  string_value: "anolis_status"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 1
+                }
+              }
+            }
+            args {
+              string_value: "begin"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Comparison (string)"
+            args {
+              call_value {
+                functionName: "Get Variable (string)"
+                args {
+                  string_value: "anolis_status"
+                }
+              }
+            }
+            args {
+              call_value {
+                functionName: "Get Preset Value (int)"
+                args {
+                  string_value: "IsOrIsNot"
+                }
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+              string_value: "decline"
+            }
+          }
+        }
+      }
+    }
+    conversationPoint {
+      conversationID: "59d853ba656433941b003fd8"
+      turnToFace: true
+    }
+    interaction_info_text: ""
+  }
   lod: 0
   character_instance {
     prefab_name: "Berlin:KnightErrants/HumanMaleKnightErrantMage"
@@ -13733,6 +14152,197 @@ characters {
       filename: "misc_biker-rider"
     }
     karma: 117
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 45
+    y: 0
+    z: 166
+  }
+  orientation: ORIENTATION_S
+  displayName: "npc_antag_pinkman"
+  idRef {
+    id: "59d853ff656433941b003fe1"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "Lvl3_Merc_Troll_TechMage"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 5
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 2
+        magic: 0
+        hp: 0
+        ap: 1
+        armor: 1
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 5
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 2
+        dodge: 4
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 5
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      attitude: AttitudeAggressive
+      vulnerabilities {
+        heal: VulnerabilityLevel_More
+        poison: VulnerabilityLevel_More
+      }
+    }
+    team_id: "Civilians"
+    char_name: "J.P."
+    enabled_at_start: false
+    pc_spawn_number: -1
+    cyberware_right_arm: "Obvious Cyberarm"
+    cyberware_left_leg: "Obvious Cyberleg"
+    portrait {
+      filename: "npc_cameo_pinkman"
+    }
+    portrait_code_override: "s6h0c0b4c10t0"
+    karma: 137
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_E
+  displayName: "MERCHANT_Aim"
+  idRef {
+    id: "5a16e25a333165b02500570c"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    conversationPoint {
+      conversationID: "5a16e388333165b02500571a"
+      turnToFace: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
+    character_sheet_id: "Story_Paco"
+    equipment_sheet_id: "Merchant_Weapons_Mid"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "Player_SamuraiPunk"
+    }
+    team_id: "Civilians"
+    char_name: "Aim Answorth"
+    pc_spawn_number: -1
+    portrait {
+      filename: "human_male_ganger-back"
+    }
+    portrait_code_override: "s5h6b4"
+    karma: 98
   }
 }
 variables {
@@ -13887,6 +14497,22 @@ variables {
     typeName: "int"
   }
 }
+variables {
+  string_value: ""
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "anolis_status"
+    typeName: "string"
+  }
+}
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "to-a"
+    typeName: "bool"
+  }
+}
 mapEvents: "BunrakuTeamChange"
 mapEvents: "MobConfrontSpeak"
 mapEvents: "YakBrothelMoveBunraku"
@@ -13898,6 +14524,8 @@ mapEvents: "DiversionCutsceneStartBattle"
 mapEvents: "MatrixRedPill"
 senseTags: "isDecker"
 senseTags: "cutscene_mobsters"
+senseTags: "isShell"
+senseTags: "isWiseman"
 goals {
   name: "Enter Ranier Innovations complex."
   type: GoalType_Primary
