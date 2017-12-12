@@ -5,3 +5,6 @@ autodl.d/
 # Leftbehind junks
 *.log
 
+# thumbs.db cancer
+*.db
+

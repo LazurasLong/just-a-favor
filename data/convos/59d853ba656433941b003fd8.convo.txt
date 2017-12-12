@@ -1,0 +1,309 @@
+idRef {
+  id: "59d853ba656433941b003fd8"
+}
+ui_name: "01-ranr-anolis"
+nodes {
+  idRef {
+    id: "59d85b23656433941b003fe8"
+  }
+  index: 0
+  text: "{{GM}}Even though this nutjob is wearing a mask, you swear you can see the maniacal smile he\'s wearing.{{/GM}}\n\nPraise to HIM ALMIGHTY... I know that HE has brought you to me.\n\nMy child... {{GM}}Your team\'s existence is taken heed of.{{/GM}}\n ...my children... I am not what you may indeed think I am-- There\'s a way we can both be of service t\'another.\n{{GM}}In a trivid-evangelistic fashion, he slowly raises his hands.{{/GM}}\nI... ... .. .\n"
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59d85b36656433941b003feb"
+  }
+  index: 1
+  text: ".. ...am a practitioner, minister, and purveyor of the magicks and truths of our one True God!\n\n{{GM}}The rosary now apparrent-- this man is leader of some Catholic esoteric clique.{{/GM}}\n\nObviously, chromed-out lads like yourselves are not here for tourism. You help me, and I can help you-- the aftermath which the Lord will bring in great bounty to you."
+  branches {
+    responseText: "Meh-hmph... Weren\'t you just shouting about novacream, uhhhh... preacher man?"
+    nextNodeIndex: 2
+    onlyOnce: true
+    idRef {
+      id: "59d85d26656433941b003ff4"
+    }
+  }
+  branches {
+    responseText: "Sure thing, omae, this chrome can head out any direction you\'d like."
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "The fuck is wrong with this sect of the sprawl. Fucking Dunkelzahn; Time is nuyen."
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Y\342\200\222 Later, fragface."
+    nextNodeIndex: 9
+    comment: "IGNORED"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59faa043656433442f0001e3"
+  }
+  index: 2
+  text: "Why yes! The evil of BTLs has forever blinded the flock from the eyes of God. If I, yes I, could just provide someth-- an alternative... The SimSense devil would be slain, and I, Anolis, a true shepherd for the Lord.\n\n{{GM}}The sheer expressiveness from this Masked man eludes your entire crew. What a slottin\' jackass....{{/GM}}"
+  branches {
+    responseText: "Sounds like our M.O.\342\200\222 And, in the name of God! Wiz."
+    nextNodeIndex: 3
+  }
+  branches {
+    responseText: "{{GM}}You motion your firearm.{{/GM}} Shut up. Details or I frag you."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "{{GM}}You begin forming a Powerbolt.{{/GM}} Frag yourself, slotface. Another word, I\'ll flay ya."
+    conditions {
+      ops {
+        functionName: "Compare Actor Skill"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorSkills"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          int_value: 3
+        }
+      }
+    }
+    nextNodeIndex: 4
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59faa225656433442f0001e6"
+  }
+  index: 3
+  text: "Finally! Some good karma, \'ey?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isShell"
+}
+nodes {
+  idRef {
+    id: "59faa293656433442f0001fa"
+  }
+  index: 4
+  text: "The crazed preacher madman hands you a datapad containing the location of the novacream operation going down now in this area. You copy it\'s contents to your PDA swiftly and drop it. It crashes on the street as you stroll on..."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "anolis_status"
+            }
+          }
+        }
+        args {
+          string_value: "accept"
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "ACCEPTED"
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "59d85e45656433941b004000"
+  }
+  index: 5
+  text: "N--... .. . {{GM}}You rudely and swiftly cut him off-- Way of the shadows, chummer.{{/GM}}"
+  branches {
+    responseText: "Now, just who exactly are you beefing with? Who\'d be causing problems for a lot of priests, now?"
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "I\'ve never pissed off the Church-- BUT, I\'ve pissed off the Lodge.... Their null-vibing claws aren\'t up in this right?"
+    nextNodeIndex: 7
+  }
+  branches {
+    responseText: "You draw the Star; We\'ll bring the firepower."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59faa5d9656433442f000208"
+  }
+  index: 6
+  text: "{{GM}}He clasps his grimey gloves together in a merchantly manner.{{/GM}}\n\nEverything you need to know is on this. HERE....."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59faa63a656433442f000210"
+  }
+  index: 7
+  text: "Of course not!! Ehm...\n\nBut no, just gangers that happen to bangers! Huawh, hmmm...\n\n {{GM}}Ahhhckkehm{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "59faa50a656433442f000203"
+  }
+  index: 8
+  text: "I run a... profitable worship center for the, ahhmm... lost.  {{GM}}*sssshshrsssk*{{/GM}}\n\nDamn Mazona respirators!"
+  branches {
+    responseText: "Just tell me where the dope is, coghead."
+    nextNodeIndex: 6
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "You know what, nah... Frag you chummer. Let\'s jet."
+    actions {
+      ops {
+        functionName: "Set Variable (string)"
+        args {
+          call_value {
+            functionName: "Get Variable (string)"
+            args {
+              string_value: "anolis_status"
+            }
+          }
+        }
+        args {
+          string_value: "decline"
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "DECLINED"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5a16dfeb333165b02500568a"
+  }
+  index: 9
+  text: "Hey,  $+(l.name), I don\'t know about you, but this drekhead seemed pretty damn crazy. And...\n\n{{GM}}He clears his throat.{{/GM}}\n\nI don\'t know about you, but I\'m sure we\'ll need all the help we can get for this run."
+  branches {
+    responseText: "My team. My mission. My decision."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Concern noted, Wiseman."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I\'m not sure I want to go with this guy. We should still take a look around, bud."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isWiseman"
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}
