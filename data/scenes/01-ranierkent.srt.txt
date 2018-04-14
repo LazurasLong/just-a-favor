@@ -9622,11 +9622,227 @@ triggers {
   }
   isActive: true
   idRef {
-    id: "5ad24f9c3363326a15542139"
+    id: "5ad37ae3336332af3f080437"
+  }
+  elseActions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5ad380aa336332af3f0804fb"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_ai02C"
+  events {
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Enter/Exit Cover"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5acec0423363326635db7d5f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnterOrExit"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad380aa336332af3f0804fb"
   }
   elseActions {
   }
   is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_ai06"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5ad382a3336332af3f080500"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Protect (Actor)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "sspiritEvent"
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad382ec336332af3f080501"
+  }
+  elseActions {
+  }
+  is_oneshot: true
 }
 regions {
   name: "Camera-EXTERIOR"
@@ -11296,6 +11512,52 @@ regions {
   is_camera_region: false
   idRef {
     id: "5ad24c0c336332ba1400cfec"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "sewerspirit_ai05"
+  position {
+    x: 35
+    y: 169
+    width: 5
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5ad382a3336332af3f080500"
   }
   highlight_color {
     r: 0
