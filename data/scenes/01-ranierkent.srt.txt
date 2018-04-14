@@ -8705,6 +8705,929 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "Sewers_spawnSpirit"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5acecede3363326635db7d92"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Team"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Activate Actor Spawner"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor Reference)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "End Current Team Round"
+    }
+    ops {
+      functionName: "Order Actor to Set Priority Target"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5acec0423363326635db7d5f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Player)"
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5acecf1d3363326635db7d93"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "Sewers_deadSpirit"
+  events {
+    ops {
+      functionName: "On Actor Death"
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add Actor Karma"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        int_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5aced5fa3363326635db7dc3"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "Sewers_spirit_ai01"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5ad2423f336332ba1400cfe2"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            float_value: 29
+          }
+          args {
+            call_value {
+              functionName: "Nothing Selected"
+            }
+          }
+          args {
+            float_value: 168
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "sspiritEvent"
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad2427c336332ba1400cfe3"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_a02"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "sspiritEvent"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Hunt And Destroy (Team)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Attack Actor With Weapon"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Actor on Team"
+          args {
+            call_value {
+              functionName: "Player Team"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5ad24f9c3363326a15542139"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad24447336332ba1400cfe4"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_ai02B"
+  events {
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Order Actor to Set Target Preference"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5acec0423363326635db7d5f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TargetPreference"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad24f9c3363326a15542139"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_ai03"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5ad244ff336332ba1400cfe6"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (3D)"
+          args {
+            float_value: 29
+          }
+          args {
+            call_value {
+              functionName: "Nothing Selected"
+            }
+          }
+          args {
+            float_value: 168
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "sspiritEvent"
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad244e7336332ba1400cfe5"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "Sewers_spirit_ai04"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5ad24775336332ba1400cfe8"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Attack Actor With Weapon"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Actor on Team"
+          args {
+            call_value {
+              functionName: "Player Team"
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "sspiritEvent"
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad2479e336332ba1400cfe9"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "Sewers_spirit_ai05"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5ad24c0c336332ba1400cfec"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (Actor)"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5acec0423363326635db7d5f"
+          }
+        }
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Actor)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Random Actor on Team"
+          args {
+            call_value {
+              functionName: "Get Preset Value (string)"
+              args {
+                string_value: "FactionList"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Map Item (SceneDimension)"
+              args {
+                string_value: "Default"
+              }
+            }
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 5
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Send Event After Delay"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "sspiritEvent"
+          }
+        }
+      }
+      args {
+        float_value: 2
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad24be8336332ba1400cfea"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "Sewers_spirit_ai02B"
+  events {
+  }
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Add To Variable (int)"
+      args {
+        call_value {
+          functionName: "Get Variable (int)"
+          args {
+            string_value: "sspirit_ctrl"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+    ops {
+      functionName: "Order Actor to Set Target Preference"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5acec0423363326635db7d5f"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TargetPreference"
+          }
+          args {
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5ad24f9c3363326a15542139"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "Camera-EXTERIOR"
   position {
@@ -10125,7 +11048,7 @@ regions {
     a: 1
   }
   ambience_template: "sewer-busy"
-  combat_music: ""
+  combat_music: "Seattle-Set9-Combat"
   default_music: "Berlin-Set9-Stealth"
   loop_combat_music: true
   loop_default_music: true
@@ -10177,12 +11100,242 @@ regions {
   loop_default_music: false
   no_fow_in_region: false
 }
+regions {
+  name: "AnolisSQ_SpawnSS"
+  position {
+    x: 40
+    y: 164
+    width: -2
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5acecede3363326635db7d92"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "sewerspirit_ai01"
+  position {
+    x: 39
+    y: 164
+    width: -2
+    height: 8
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5ad2423f336332ba1400cfe2"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "sewerspirit_a02"
+  position {
+    x: 28
+    y: 171
+    width: 11
+    height: 3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5ad244ff336332ba1400cfe6"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "sewerspirit_ai03"
+  position {
+    x: 25
+    y: 173
+    width: 14
+    height: 1
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5ad24775336332ba1400cfe8"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "sewerspirit_ai04"
+  position {
+    x: 29
+    y: 164
+    width: 3
+    height: 6
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5ad24c0c336332ba1400cfec"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -15
+    x: 55
     y: 0
-    z: 40
+    z: 167
   }
   orientation: ORIENTATION_S
   displayName: "P1"
@@ -11212,9 +12365,9 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -16
+    x: 54
     y: 0
-    z: 39
+    z: 166
   }
   orientation: ORIENTATION_S
   displayName: "P2"
@@ -11235,9 +12388,9 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -16
+    x: 54
     y: 0
-    z: 40
+    z: 167
   }
   orientation: ORIENTATION_S
   displayName: "P3"
@@ -11258,9 +12411,9 @@ characters {
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -16
+    x: 53
     y: 0
-    z: 41
+    z: 167
   }
   orientation: ORIENTATION_S
   displayName: "P4"
@@ -14345,6 +15498,119 @@ characters {
     karma: 98
   }
 }
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: 30
+    y: 0
+    z: 178
+  }
+  orientation: ORIENTATION_W
+  displayName: "Sewage_Spirit"
+  idRef {
+    id: "5acec0423363326635db7d5f"
+  }
+  lod: 0
+  character_instance {
+    prefab_name: "Seattle:Spirit/SpiritWater"
+    character_sheet_id: "Spirit Water"
+    equipment_sheet_id: "Spirit Water F4 Gear"
+    character_mod {
+      stats {
+        body: 4
+        quickness: -3
+        strength: -1
+        charisma: 0
+        intelligence: 0
+        willpower: 3
+        essence: 2
+        magic: 2
+        hp: 0
+        ap: 2
+        armor: -6
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+        is_fearless: 1
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "gumbo_Mage"
+      attitude: AttitudeFurious
+      attackRandom: AttackStyle_BestOnly
+      vulnerabilities {
+        normal: VulnerabilityLevel_Less
+        magic: VulnerabilityLevel_More
+        poison: VulnerabilityLevel_Immune
+        shock: VulnerabilityLevel_More
+      }
+    }
+    equipment {
+      prefab_name: "Spell Haste 3"
+    }
+    equipment {
+      prefab_name: "SP Spell Slow 3"
+    }
+    equipment {
+      prefab_name: "SP Hydro Daggers"
+    }
+    equipment {
+      prefab_name: "Spell Aim 3"
+    }
+    equipment {
+      prefab_name: "SP Spell Manabolt 2"
+    }
+    equipment {
+      prefab_name: "SP Big Wave Power"
+    }
+    team_id: "Gangers"
+    char_name: "Sewer Spirit"
+    enabled_at_start: false
+    pc_spawn_number: -1
+    portrait {
+      filename: "Generic_Spirit_Water"
+    }
+    description_bio: "Ewww"
+    karma: 307
+  }
+}
 variables {
   bool_value: false
   variableref_value {
@@ -14513,6 +15779,14 @@ variables {
     typeName: "bool"
   }
 }
+variables {
+  int_value: 0
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "sspirit_ctrl"
+    typeName: "int"
+  }
+}
 mapEvents: "BunrakuTeamChange"
 mapEvents: "MobConfrontSpeak"
 mapEvents: "YakBrothelMoveBunraku"
@@ -14522,6 +15796,7 @@ mapEvents: "DiversionCutsceneMovementDone"
 mapEvents: "DiversionCutsceneMoveCtrl"
 mapEvents: "DiversionCutsceneStartBattle"
 mapEvents: "MatrixRedPill"
+mapEvents: "sspiritEvent"
 senseTags: "isDecker"
 senseTags: "cutscene_mobsters"
 senseTags: "isShell"
