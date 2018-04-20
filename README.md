@@ -8,6 +8,12 @@ For ContentPack dependencies, take a look at the `dependencies.png` file right h
 
 For ContentPack thanks & credits, take a look at the `muh_thanks.txt` file right here in the root directory.  
 
+ __\*\-\*\-\*__  
+
+** __[For anything & all regarding new tiles/etc, etc...](https://github.com/m-flak/just-a-favor/blob/master/photoshop_doc/raw_sources.MD)__ **
+> Click above: __./photoshop_doc/raw_sources.MD__
+
+ __\*\-\*\-\*__  
 ### SCREENSHOTS
 ###### Taken from [my STEAM](https://steamcommunity.com/profiles/76561197992804208/screenshots/?appid=300550)
 **Sybrespace**
@@ -23,6 +29,7 @@ For ContentPack thanks & credits, take a look at the `muh_thanks.txt` file right
 ![Kent](https://steamuserimages-a.akamaihd.net/ugc/764896681220638171/24DC6775D2160822B96F4F0998AC45872F3F2EE4/)
 ![Kent](https://steamuserimages-a.akamaihd.net/ugc/764896681223218172/B95B0C39454F538979B5D251197FABA2D186E1B2/)
 ![Kent](https://steamuserimages-a.akamaihd.net/ugc/869623038451635459/FABD4297B8CE70B1D4A6C75CA2BADE864C241EE3/)
-	* **Next Below:** April 18th
+- **Next Below:** April 18th
+
 ![Kent Sewers](http://www.upl.co/uploads/latestdfdc1524099643.jpeg)
 ![Kent Sewers](http://www.upl.co/uploads/latestdfdc21524099780.jpeg)
