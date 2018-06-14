@@ -16254,7 +16254,7 @@ characters {
   }
   lod: 0
   character_instance {
-    prefab_name: "Berlin:KnightErrants/ElfFemaleKnightErrantShaman"
+    prefab_name: "Seattle:Homeless/HumanMaleHomelessJacket"
     character_sheet_id: "Acoylte_Lv1_Human"
     character_mod {
       stats {
@@ -16317,7 +16317,7 @@ characters {
       vulnerabilities {
       }
     }
-    team_id: "Shadowrunners"
+    team_id: "Civilians"
     char_name: "Hobo Jack"
     pc_spawn_number: -1
     portrait {
