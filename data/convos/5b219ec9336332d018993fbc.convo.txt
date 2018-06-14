@@ -1,0 +1,51 @@
+idRef {
+  id: "5b219ec9336332d018993fbc"
+}
+ui_name: "01-ranr-sew-hj"
+nodes {
+  idRef {
+    id: "5b219ed4336332d018993fc2"
+  }
+  index: 0
+  text: "He is visibly startled.\n\nHead bobbing like a sine wave, you can tell he is blitzed out of his marbles."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b219f37336332d018993fc5"
+  }
+  index: 1
+  text: "Whhaa--...\n\n{{GM}}He clears his sinusii quite heavily.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b21a1c8336332d018993fc8"
+  }
+  index: 2
+  text: "Yeah?\n\n{{GM}}You notice keys of novacream.{{/GM}}"
+  branches {
+    responseText: "You look surprised?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Now, what supposed we have here?"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{GM}}Wave gun.{{/GM}}"
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}
