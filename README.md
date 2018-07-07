@@ -1,6 +1,11 @@
 # **Just a Favor**  
 ## my shadowrun dfdc custom campaign  
 ---
+###### First off:
+
+**Disclaimer: This is a work of fiction. Names, characters, businesses, places, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.**
+
+###### Now onto the README:
 
 For ContentPack dependencies, take a look at the `dependencies.png` file right here in the root directory.  
 

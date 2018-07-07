@@ -1,0 +1,94 @@
+idRef {
+  id: "5b4274be336332e055b8ed55"
+}
+ui_name: "global-aj_vishnu"
+nodes {
+  idRef {
+    id: "5b427528336332e055b8ed5c"
+  }
+  index: 0
+  text: "Greetings and Tiir\'s blessing upon you."
+  branches {
+    responseText: "{{GM}}Shop for magical items...{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "You again?"
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "aj_times_met"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 2
+            }
+          }
+        }
+        args {
+          int_value: 0
+        }
+      }
+    }
+    nextNodeIndex: 1
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "I have to go."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b42763e336332e055b8ed60"
+  }
+  index: 1
+  text: "{{GM}}He smiles brightly. His arms only-so-faintly blur along with it.{{/GM}}\n\nAll are merely aspects, reflections, or mere shades of the past, young one."
+  branches {
+    responseText: "{{GM}}Shop for magical items...{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have to go."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

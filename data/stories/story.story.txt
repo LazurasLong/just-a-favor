@@ -72,6 +72,18 @@ variables {
   }
 }
 variables {
+  name: "01b_anolis_solution"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "01b_anolis_solution"
+      typeName: "int"
+    }
+  }
+}
+variables {
   name: "01b_createdDiversion"
   typeName: "bool"
   defaultValue {
@@ -92,6 +104,18 @@ variables {
       scope: TsVariableScope_Story
       name: "01b_yakuzaWillBePissed"
       typeName: "bool"
+    }
+  }
+}
+variables {
+  name: "aj_times_met"
+  typeName: "int"
+  defaultValue {
+    int_value: 0
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "aj_times_met"
+      typeName: "int"
     }
   }
 }

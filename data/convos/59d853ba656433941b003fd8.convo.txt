@@ -195,6 +195,23 @@ nodes {
           string_value: "accept"
         }
       }
+      ops {
+        functionName: "Add To Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_anolis_solution"
+            }
+          }
+        }
+        args {
+          int_value: 1
+        }
+      }
     }
     nextNodeIndex: -1
     comment: "ACCEPTED"
@@ -303,7 +320,261 @@ nodes {
   nodeType: ConversationNodeType_Simple
   sourceWithTagInScene: "isWiseman"
 }
+nodes {
+  idRef {
+    id: "5b4180f5336332343bb8edd1"
+  }
+  index: 10
+  text: "Yes? Is it done?"
+  branches {
+    responseText: "{{GM}}Lie.{{/GM}} J.P. and his goons are dead. Here it is as ordered."
+    conditions {
+      ops {
+        functionName: "Comparison (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_anolis_solution"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Item from Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "01b_dope_3.5k"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_anolis_solution"
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 12
+    hideIfUnavailable: true
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Yeah, you got that diversion cooked up for me."
+    actions {
+      ops {
+        functionName: "Remove Item from Stash"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "01b_dope_3.5k"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Set Variable (int)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (int)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "01b_anolis_solution"
+            }
+          }
+        }
+        args {
+          int_value: 5
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: "Not yet."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4418ca336332674eb8edeb"
+  }
+  index: 11
+  text: "Really? A pun?"
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "sewer_talker"
+}
+nodes {
+  idRef {
+    id: "5b4418f2336332674eb8edee"
+  }
+  index: 12
+  text: "Of course...\n\n{{GM}}You hand him the 3.5kg brick, only for him to become dismayed as you cease to hand him anymore.{{/GM}}\n\nThis is it?! Where is the rest?"
+  nodeType: ConversationNodeType_Simple
+}
 roots {
   responseText: ""
+  conditions {
+    ops {
+      functionName: "Comparison (int)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (int)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "01b_anolis_solution"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 0
+      }
+    }
+  }
   nextNodeIndex: 0
+}
+roots {
+  responseText: ""
+  conditions {
+    ops {
+      functionName: "AND"
+      args {
+        call_value {
+          functionName: "Comparison (int)"
+          args {
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_anolis_solution"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 2
+              }
+            }
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Comparison (int)"
+          args {
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_anolis_solution"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 4
+              }
+            }
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 10
 }
