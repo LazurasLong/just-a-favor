@@ -63,7 +63,7 @@ character_mod {
 }
 team_id: "Shadowrunners"
 char_name: "Shell"
-GeneralTags: "isShell,isCREW"
+GeneralTags: "isShell"
 pc_spawn_number: -1
 spawn_type: SpawnType_Normal
 hiring_type: HiringType_Hireable

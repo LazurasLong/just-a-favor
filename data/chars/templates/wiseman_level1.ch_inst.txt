@@ -78,7 +78,7 @@ portrait {
 }
 description_bio: "Highly-skilled decker with a helping of common sense."
 portrait_code_override: "s6h3c8b0c0t0"
-GeneralTags: "isWiseman,isCREW"
+GeneralTags: "isWiseman"
 karma: 4
 hiring_cost_override: 0
 hiring_tag: "Crew / Street Decker"

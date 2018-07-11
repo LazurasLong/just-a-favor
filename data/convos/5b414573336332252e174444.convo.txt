@@ -249,6 +249,20 @@ nodes {
           }
         }
       }
+      ops {
+        functionName: "Send Event After Delay"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "shamEvent"
+            }
+          }
+        }
+        args {
+          float_value: 0.25
+        }
+      }
     }
     nextNodeIndex: -1
   }
@@ -423,7 +437,7 @@ nodes {
     id: "5b4169bd3363323c33174569"
   }
   index: 8
-  text: "He tosses you a brick"
+  text: "He tosses you a brick."
   branches {
     responseText: ""
     actions {
@@ -549,7 +563,7 @@ nodes {
   index: 12
   text: "\302\241Chupa muerta!"
   branches {
-    responseText: ""
+    responseText: "{{GM}}Shoot first.{{/GM}}"
     actions {
       ops {
         functionName: "Change Actor Team"
@@ -615,6 +629,20 @@ nodes {
           call_value {
             functionName: "Triggering Actor"
           }
+        }
+      }
+      ops {
+        functionName: "Send Event After Delay"
+        args {
+          call_value {
+            functionName: "Get Map Item (Event)"
+            args {
+              string_value: "shamEvent"
+            }
+          }
+        }
+        args {
+          float_value: 0.25
         }
       }
     }

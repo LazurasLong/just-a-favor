@@ -62284,11 +62284,15 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
-    dummyInteraciton {
+    transitionPoint {
+      scene_name: "01-ranierkent2"
+      confirmation_text: "Ready to enter the Ranier Innovations Complex? "
     }
     interaction_info_text: ""
   }
   lod: 0
+  character_instance {
+  }
 }
 props {
   name: "haven_floorDecoration_grunge03"

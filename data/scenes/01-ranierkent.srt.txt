@@ -10567,6 +10567,39 @@ triggers {
   }
   actions {
     ops {
+      functionName: "Interrupt Team\'s Movement"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+    ops {
       functionName: "Add Tag to Actor"
       args {
         call_value {
@@ -10598,6 +10631,46 @@ triggers {
             }
           }
           args {
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Order Actor to Move To (Point)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5b414202336332252e17444a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specified Point (2D)"
+          args {
+            float_value: 64
+          }
+          args {
+            float_value: 198
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 3
           }
         }
       }
@@ -10922,6 +10995,168 @@ triggers {
   isActive: true
   idRef {
     id: "5b4621cb3363322145b8eefd"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CL_ai_start"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "shamEvent"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5b466349336332830fb8edc5"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Suspend Team\'s Turn"
+      args {
+        call_value {
+          functionName: "Get Preset Value (string)"
+          args {
+            string_value: "FactionList"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b466349336332830fb8edc5"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "CL_ai0"
+  events {
+    ops {
+      functionName: "On New Round"
+      args {
+        call_value {
+          functionName: "Get Map Item (SceneDimension)"
+          args {
+            string_value: "Default"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Order Actor to Move To (Region)"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5b414202336332252e17444a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5b4661b4336332830fb8ed55"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Set Item AI priority weight"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Actor)"
+              args {
+                string_value: "5b414202336332252e17444a"
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "Berlin_Bound Abomination Spirit 5"
+          }
+        }
+      }
+      args {
+        int_value: 1
+      }
+    }
+  }
+  isActive: false
+  idRef {
+    id: "5b46637e336332830fb8edc6"
   }
   elseActions {
   }
@@ -12770,7 +13005,7 @@ regions {
 regions {
   name: "zomg_nicole"
   position {
-    x: 62
+    x: 59
     y: 198
     width: 4
     height: 6
@@ -12871,6 +13106,52 @@ regions {
   is_camera_region: false
   idRef {
     id: "5b4621523363322145b8eefc"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "CL_ai_goto"
+  position {
+    x: 54
+    y: 197
+    width: 2
+    height: 2
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5b4661b4336332830fb8ed55"
   }
   highlight_color {
     r: 0
@@ -17245,9 +17526,9 @@ characters {
 characters {
   name: "chars_icon_playerIcon"
   gridPoint {
-    x: 27
+    x: 26
     y: 0
-    z: 211
+    z: 210
   }
   orientation: ORIENTATION_W
   displayName: "hobo_jack"
@@ -17739,7 +18020,7 @@ characters {
         quickness: 5
         strength: 0
         charisma: 0
-        intelligence: 0
+        intelligence: 3
         willpower: 0
         essence: 0
         magic: 0
@@ -17766,7 +18047,7 @@ characters {
         decking: 0
         conjuring: 0
         spirit_summoning: 0
-        drone_control: 3
+        drone_control: 4
         biotech: 0
         dodge: 5
         etiquette_corporate: 0
@@ -17787,7 +18068,7 @@ characters {
         unarmed: 0
         spirit_control: 0
         esp_control: 0
-        drone_combat: 3
+        drone_combat: 4
       }
       attitude: AttitudeAggressive
       vulnerabilities {
@@ -17810,7 +18091,7 @@ characters {
     portrait {
       filename: ""
     }
-    karma: 128
+    karma: 153
   }
 }
 variables {
@@ -18039,6 +18320,7 @@ mapEvents: "DiversionCutsceneMoveCtrl"
 mapEvents: "DiversionCutsceneStartBattle"
 mapEvents: "MatrixRedPill"
 mapEvents: "sspiritEvent"
+mapEvents: "shamEvent"
 senseTags: "isDecker"
 senseTags: "cutscene_mobsters"
 senseTags: "isShell"
