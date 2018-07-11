@@ -206,6 +206,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Waypoint on Actor"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "PrimaryOrSecondary"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "593ef56a6463305813002f0d"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -4867,37 +4889,72 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (bool)"
+      functionName: "AND"
       args {
         call_value {
-          functionName: "Get Story Variable (bool)"
+          functionName: "Comparison (bool)"
           args {
-            string_value: "545e82f23362655810005f46"
+            call_value {
+              functionName: "Get Story Variable (bool)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_createdDiversion"
+              }
+            }
           }
           args {
-            string_value: "01b_createdDiversion"
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "bool"
+              }
+              args {
+                int_value: 1
+              }
+            }
           }
         }
       }
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Comparison (int)"
           args {
-            string_value: "IsOrIsNot"
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_anolis_solution"
+              }
+            }
           }
           args {
-            int_value: 1
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 4
+              }
+            }
           }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
           args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 1
+            int_value: 5
           }
         }
       }
@@ -4974,43 +5031,117 @@ triggers {
   }
   conditions {
     ops {
-      functionName: "Comparison (bool)"
+      functionName: "AND"
       args {
         call_value {
-          functionName: "Get Story Variable (bool)"
+          functionName: "Comparison (bool)"
           args {
-            string_value: "545e82f23362655810005f46"
+            call_value {
+              functionName: "Get Story Variable (bool)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_createdDiversion"
+              }
+            }
           }
           args {
-            string_value: "01b_createdDiversion"
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "IsOrIsNot"
+              }
+              args {
+                int_value: 1
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "bool"
+              }
+              args {
+                int_value: 1
+              }
+            }
           }
         }
       }
       args {
         call_value {
-          functionName: "Get Preset Value (int)"
+          functionName: "Comparison (int)"
           args {
-            string_value: "IsOrIsNot"
+            call_value {
+              functionName: "Get Story Variable (int)"
+              args {
+                string_value: "545e82f23362655810005f46"
+              }
+              args {
+                string_value: "01b_anolis_solution"
+              }
+            }
           }
           args {
-            int_value: 1
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "Comparison Ops"
+              }
+              args {
+                int_value: 0
+              }
+            }
           }
-        }
-      }
-      args {
-        call_value {
-          functionName: "Get Preset Value (int)"
           args {
-            string_value: "bool"
-          }
-          args {
-            int_value: 0
+            int_value: 5
           }
         }
       }
     }
   }
   actions {
+    ops {
+      functionName: "Set Goal Status"
+      args {
+        call_value {
+          functionName: "Get Map Item (Goal)"
+          args {
+            string_value: "Create a diversion."
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "GoalStatus"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "548f2962336265540d006b8e"
+  }
+  elseActions {
     ops {
       functionName: "Set Goal Status"
       args {
@@ -5044,12 +5175,6 @@ triggers {
         }
       }
     }
-  }
-  isActive: true
-  idRef {
-    id: "548f2962336265540d006b8e"
-  }
-  elseActions {
   }
   is_oneshot: true
 }
@@ -8518,7 +8643,7 @@ triggers {
   }
   elseActions {
   }
-  is_oneshot: true
+  is_oneshot: false
 }
 triggers {
   name: "CSASDIS1"
@@ -10720,6 +10845,88 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "Anolis_DSR"
+  events {
+    ops {
+      functionName: "On Region Enter"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5b4621523363322145b8eefc"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "On Region Exit"
+      args {
+        call_value {
+          functionName: "Get Map Item (Region)"
+          args {
+            string_value: "5b4621523363322145b8eefc"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "598eaa816463303420006bd0"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b4621cb3363322145b8eefd"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Camera-EXTERIOR"
   position {
@@ -12618,6 +12825,52 @@ regions {
   is_camera_region: false
   idRef {
     id: "5b416dbe3363323c331745f2"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: -1
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.50196081
+    g: 0.50196081
+    b: 0.50196081
+    a: 1
+  }
+  ambience_template: ""
+  combat_music: ""
+  default_music: ""
+  loop_combat_music: true
+  loop_default_music: false
+  no_fow_in_region: false
+}
+regions {
+  name: "AnolisSQ_DisableShoutRegion"
+  position {
+    x: 9
+    y: -10
+    width: 8
+    height: 3
+  }
+  enabledAtStart: true
+  is_camera_region: false
+  idRef {
+    id: "5b4621523363322145b8eefc"
   }
   highlight_color {
     r: 0
@@ -16740,6 +16993,7 @@ characters {
       }
       archetypeName: "gumbo_MeleeSoldier"
       attitude: AttitudeAggressive
+      attackRandom: AttackStyle_AnyNonZero
       vulnerabilities {
         heal: VulnerabilityLevel_More
         poison: VulnerabilityLevel_More
@@ -17079,7 +17333,7 @@ characters {
   gridPoint {
     x: 62
     y: 0
-    z: 194
+    z: 195
   }
   orientation: ORIENTATION_E
   GeneralTags: "breakingbadder"
@@ -17147,7 +17401,7 @@ characters {
         esp_control: 0
         drone_combat: 0
       }
-      archetypeName: "gumbo_common"
+      archetypeName: "Guard - Protect"
       attitude: AttitudeAggressive
       attackRandom: AttackStyle_RandomAll
       vulnerabilities {

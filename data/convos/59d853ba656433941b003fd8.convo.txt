@@ -13,6 +13,16 @@ nodes {
     nextNodeIndex: 1
   }
   nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Clear Waypoint from Actor"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+    }
+  }
 }
 nodes {
   idRef {
@@ -473,6 +483,77 @@ nodes {
   }
   index: 12
   text: "Of course...\n\n{{GM}}You hand him the 3.5kg brick, only for him to become dismayed as you cease to hand him anymore.{{/GM}}\n\nThis is it?! Where is the rest?"
+  branches {
+    responseText: "You know, I can always just kill you."
+    nextNodeIndex: 13
+  }
+  branches {
+    responseText: "I\'m here on a run, omae. I helped you. Now, you help me."
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I missed the part where I told you I worked for DocWagon."
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b45f4ef3363322145b8ee68"
+  }
+  index: 13
+  text: "Ay, check my two SMG\'s drek-brains!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceWithTagInScene: "isShell"
+}
+nodes {
+  idRef {
+    id: "5b45f5083363322145b8ee6b"
+  }
+  index: 14
+  text: "You\'re...\n\n{{GM}}You\'re not sure if this next sound is either his respirator or him groaning.{{/GM}}\n\nRight!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b45f6143363322145b8ee6e"
+  }
+  index: 15
+  text: "I\'ll have my flock investigate. Be assured I will find out if you\'re trying to screw me over, you slotting jackal!"
+  branches {
+    responseText: "Father, you know I wouldn\'t dare cross the Lord!"
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "Just give me my damn diversion."
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have to run."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b45f72a3363322145b8eeb1"
+  }
+  index: 16
+  text: "Touch\303\251."
+  branches {
+    responseText: ""
+    nextNodeIndex: 15
+    auxiliaryLink: true
+  }
   nodeType: ConversationNodeType_Simple
 }
 roots {
