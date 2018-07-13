@@ -1,0 +1,64 @@
+Way of the Gun Adept
+
+
+Version 1.5
+
+Changelog:
+
+- Corrected various typos and spell descriptions
+
+- Improved Reflexes no longer gives AP, but now increases dodge and the Adept dodges the first attack of every turn.  The reason I did this was due to the bioware that gives 1 AP and costs 0 Essence.  I lowered the Chi requirement to 9.
+
+- Rebalanced Chi Focus and Chi Onslaught:
+  SMGs:  Instead of reducing AP the abilities now flush targets out of cover.  
+  Pistols:  Corrected animations for both powers.  Chi Onslaught now is three shots on a single target.
+  Shotguns:  Corrected animations for both powers.  Both powers now strip armor from a target.
+  Rifles:  Instead of taking AP, they now ignore some of the armor on a target.
+
+
+
+- Now all passive-only powers require an essence/magic score of 5 or 6, updated the spell descriptions.  I wanted it to feel that the adept's powers were mostly on all the time, but boosts from cyberware on top of these would be OP.
+
+- Changed the look of the new outfits and updated descriptions, no change in the stats they provide.
+
+- Changed Rapid Healing to be an instant cast - you no longer have to click on yourself during activation, just click the ability.  
+
+- I have tested this with DF:DC and DMS imported into DF:DC, but sadly it will not work in Shadowrun Returns.  Some of the animations I use were only added when DF:DC came out.
+----------------------------------------------------------------------------------------------------------------
+
+This mod adds several new powers to be used with the Chi Casting Skill for Physical Adepts, as well as modifying some of the existing powers.  Here is a rundown of what is included:
+
+Additions:
+
+Chi Focus and Chi Onslaught abilities for guns - different weapon types have different powers.  For instance, the chi focus ability for pistols can take AP but the shotgun chi onslaught strips armor.
+
+Improved Senses - A passive 6% accuracy.  It cannot be used with any cyberware (Essence must be 6 to equip).
+
+Improved Ranged Combat - A buff that increases your ranged combat score by 2 for 3 turns, 6 turn cooldown.  It also boosts your weapon specializations by 2 while it is active.
+
+Improved Melee Combat - Same as above, except it boosts your Close Combat skill and Edged/Unarmed specializations.
+
+Boosted Attribute - There are 6 powers that boost an attribute by 1.  Boosted Body raises your Body by 1, etc.  Must have 6 Essence.
+
+Rapid Healing I and II - a heal spell that can only be used on yourself.  Rapid Healing I heals a flat 10 damage, Rapid Healing II heals 20 damage.  
+
+Improved Reflexes - Adds a passive 1 AP, but it has some pretty steep requirements.
+
+Two new outfits - These are different versions of the end game Adept outfit.  The appearance is the same but one gives Chi Casting +1, Willpower +1, and Ranged Combat +1, the other gives Chi Casting +1, Willpower +1, and Close Combat +1.  
+
+Changes:
+
+Stride -  Now a flat +3 movement passive.  
+
+Mystic Armor -  A flat +3 armor passive.
+
+Pain Resistance - A flat -5 damage reduction passive.
+
+These do not replace the originals, so if you like the original better then use it!
+
+
+
+This is a DATA ONLY mod, so to use any of these spells, you need to add them to vendors in the campaign you want to play.  I have included equipment sheets to make this easier, they are adept_tier1, adept_tier2, and adept_tier3 (all)
+
+
+
