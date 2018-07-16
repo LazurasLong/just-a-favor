@@ -168,6 +168,18 @@ variables {
   }
 }
 variables {
+  name: "INF_Wiseman"
+  typeName: "float"
+  defaultValue {
+    float_value: 1
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "INF_Wiseman"
+      typeName: "float"
+    }
+  }
+}
+variables {
   name: "JAF_STAGE"
   typeName: "int"
   defaultValue {

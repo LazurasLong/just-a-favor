@@ -44,6 +44,12 @@ content_pack_dependencies {
   package_description: "The Dead Man\'s Switch"
 }
 content_pack_dependencies {
+  package_id: "54d48095316230f03c00009a"
+  package_version: "1"
+  package_name: "Way of the Gun Adept"
+  package_description: "Several new powers for Phys Adepts"
+}
+content_pack_dependencies {
   package_id: "53472c8f3234370824006c6a"
   package_version: "1"
   package_name: "DragonfallExtended"

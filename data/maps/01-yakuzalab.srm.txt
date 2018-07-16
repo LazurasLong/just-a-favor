@@ -3001,7 +3001,7 @@ props {
   name: "pikePlace_wallDecoration_ancients"
   gridPoint {
     x: 51.5
-    y: -1.3877788e-016
+    y: -1.3877788e-16
     z: -6
   }
   orientation: ORIENTATION_S
@@ -12080,7 +12080,7 @@ props {
   name: "barrens_street_dumpster03"
   gridPoint {
     x: 13.6
-    y: 2.7755576e-017
+    y: 2.7755576e-17
     z: 28.3
   }
   orientation: ORIENTATION_E
@@ -12100,7 +12100,7 @@ props {
   name: "docks_clutter_shippingCrate04"
   gridPoint {
     x: 29.3
-    y: 2.7755576e-017
+    y: 2.7755576e-17
     z: 37.4
   }
   orientation: ORIENTATION_E
@@ -27980,7 +27980,7 @@ props {
   name: "secretLab_tech_chemicalVats"
   gridPoint {
     x: -110.1
-    y: 1.3877788e-016
+    y: 1.3877788e-16
     z: 112.9
   }
   orientation: ORIENTATION_S
@@ -28036,5 +28036,667 @@ props {
   idRef {
     id: "548375173362657014007d1e"
   }
+  lod: 0
+}
+props {
+  name: "bremerton_ship_aircon"
+  gridPoint {
+    x: 10.8
+    y: 2
+    z: 34
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 0
+    z: 37.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cad96336332f260446b8f"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 0
+    z: 38.1
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cad9c336332f260446b90"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 0
+    z: 38.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cada2336332f260446b91"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 0
+    z: 39.199997
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cada9336332f260446b92"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_arenaroof03"
+  gridPoint {
+    x: 28.7
+    y: 0
+    z: 36
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1
+    z: 37
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cade7336332f260446b93"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1
+    z: 38.1
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cade7336332f260446b94"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1
+    z: 37.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cade7336332f260446b95"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1
+    z: 39.199997
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cade7336332f260446b96"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1
+    z: 38.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cade7336332f260446b97"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1.5
+    z: 37
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cae02336332f260446b98"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1.5
+    z: 37.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cae02336332f260446b99"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1.5
+    z: 38.1
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cae02336332f260446b9a"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1.5
+    z: 38.6
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cae02336332f260446b9b"
+  }
+  lod: 0
+}
+props {
+  name: "oldtown_street_carjunk02"
+  gridPoint {
+    x: 27.8
+    y: 1.5
+    z: 39.199997
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cae02336332f260446b9c"
+  }
+  lod: 0
+}
+props {
+  name: "pikeplace_building_plain1pillar2"
+  gridPoint {
+    x: 27.7
+    y: 0
+    z: 39.53
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "power_cable_connector2"
+  gridPoint {
+    x: 27.9
+    y: 3.5
+    z: 40
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "syndicate_security_fortressBARRIER01"
+  gridPoint {
+    x: 27.3
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "syndicate_security_fortressBARRIER01"
+  gridPoint {
+    x: 27.3
+    y: 0
+    z: 35
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5b4cae9d336332f260446b9d"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 37
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 38
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b4caec3336332f260446b9e"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 39
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b4caec5336332f260446b9f"
+  }
+  lod: 0
+}
+props {
+  name: "bremerton_ship_spotlight01"
+  gridPoint {
+    x: 28.2
+    y: 2.3
+    z: 40.3
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "syndicate_window_smallglow"
+  gridPoint {
+    x: 28.12
+    y: 2.2
+    z: 40.45
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 28
+    y: 2
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 1
+      g: 1
+      b: 1
+    }
+    intensity: 3.5
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 41
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  light {
+    range: 2
+    color {
+      r: 1
+      g: 0.972549
+      b: 0.58039218
+    }
+    intensity: 3
+  }
+}
+props {
+  name: "power_cable_shad1"
+  gridPoint {
+    x: 27
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "power_cable_shad1"
+  gridPoint {
+    x: 28.5
+    y: 0
+    z: 40
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4caf9e336332f260446ba0"
+  }
+  lod: 0
+}
+props {
+  name: "syndicate_ground_towershad"
+  gridPoint {
+    x: 26.4
+    y: 0
+    z: 39.2
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "syndicate_ground_towershad"
+  gridPoint {
+    x: 26.4
+    y: 0
+    z: 36.2
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cafc4336332f260446ba1"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_signs_sign29"
+  gridPoint {
+    x: 12
+    y: 0.5
+    z: 34
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "sports_street_footballnet01"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_busStop01"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 46
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_parkingMeter"
+  gridPoint {
+    x: 29
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_parkingMeter"
+  gridPoint {
+    x: 34
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_parkingMeter"
+  gridPoint {
+    x: 41
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b4cb121336332f260446ba2"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_street_parkingMeter"
+  gridPoint {
+    x: 47
+    y: 0
+    z: 47
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b4cb128336332f260446ba3"
+  }
+  lod: 0
+}
+props {
+  name: "barrens_street_junkPile07"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_junkPile03"
+  gridPoint {
+    x: 28.5
+    y: 0
+    z: 46.4
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 46
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "system_invisible_blockMove"
+  gridPoint {
+    x: 28
+    y: 0
+    z: 48
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "haven_tech_powerGenerator01"
+  gridPoint {
+    x: 25
+    y: 0
+    z: 22
+  }
+  orientation: ORIENTATION_E
+  displayName: "AUX_POWER"
+  idRef {
+    id: "5b4cb2ad336332f260446ba7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "apg_enable"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    interactionIcon: InteractionIcon_ItemPickup
+    interaction_info_text: "Auxillary Power Controller"
+  }
+  lod: 0
+}
+props {
+  name: "power_cable_coil3"
+  gridPoint {
+    x: 24
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "power_cable_coil3"
+  gridPoint {
+    x: 24.6
+    y: 0.3
+    z: 23.4
+  }
+  orientation: ORIENTATION_N
+  idRef {
+    id: "5b4cb1e5336332f260446ba4"
+  }
+  lod: 0
+}
+props {
+  name: "power_cable_ground3"
+  gridPoint {
+    x: 25
+    y: 0
+    z: 24
+  }
+  orientation: ORIENTATION_N
+  lod: 0
+}
+props {
+  name: "power_cable_ground1"
+  gridPoint {
+    x: 27.1
+    y: 0
+    z: 25.02
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "power_cable_ground1"
+  gridPoint {
+    x: 29.5
+    y: 0
+    z: 24.720001
+  }
+  orientation: ORIENTATION_W
+  idRef {
+    id: "5b4cb216336332f260446ba5"
+  }
+  lod: 0
+}
+props {
+  name: "power_cable_ground1"
+  gridPoint {
+    x: 31.7
+    y: 0
+    z: 24.4
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "docks_vehicle_helicopter"
+  gridPoint {
+    x: 48.8
+    y: 5.3
+    z: 32.6
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+}
+props {
+  name: "barrens_street_signStop"
+  gridPoint {
+    x: 27
+    y: 0
+    z: 45
+  }
+  orientation: ORIENTATION_S
   lod: 0
 }

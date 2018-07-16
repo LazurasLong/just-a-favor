@@ -14,7 +14,89 @@ nodes {
   }
   branches {
     responseText: "About Renraku? Yeah."
-    nextNodeIndex: 9
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 14
+    hideIfUnavailable: true
+  }
+  branches {
+    responseText: "Didn\'t have to. They both reeked of the same drek that- that Ayle bitch did of."
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 17
+    hideIfUnavailable: true
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -26,7 +108,87 @@ nodes {
   text: "{{GM}}He rolls his eyes at you and groans.{{/GM}}\n\nThe corporate guy, $+(l.name). The suit."
   branches {
     responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
     nextNodeIndex: 2
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 9
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -176,7 +338,7 @@ nodes {
     id: "548372453362657014007cd7"
   }
   index: 7
-  text: "See...\n\nThis what I\'m talking about there\'s no way in hell these two events aren\'t connected."
+  text: "See...\n\nThis is what I\'m talking about there\'s no way in hell these two events aren\'t connected."
   branches {
     responseText: ""
     nextNodeIndex: 8
@@ -197,13 +359,181 @@ nodes {
 }
 nodes {
   idRef {
-    id: "54836fcf3362657014007c9e"
+    id: "5b4cf2503363329711ca7eb4"
   }
   index: 9
+  text: "Remember that creepy mage woman from Tenpenny?"
+  branches {
+    responseText: "Uh-huh."
+    nextNodeIndex: 4
+    auxiliaryLink: true
+    comment: "INFLUENCE NEUTRAL"
+  }
+  branches {
+    responseText: "Oh, you mean the lady that geeked your sister!"
+    nextNodeIndex: 10
+    comment: "INFLUENCE GAIN/NEUTRAL"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cf2da3363329711ca7eb8"
+  }
+  index: 10
+  text: ""
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_etiquetteEscape"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_etiquetteEscape"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cf3333363329711ca7ebc"
+  }
+  index: 11
+  text: "At least, I can rest at ease knowing who did it.\n\n{{GM}}He smiles.{{/GM}}\n\nThank you, $+(l.name).\n\n{{GM}}You have gained influence (+1) with Wiseman.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Add To Variable (float)"
+      args {
+        call_value {
+          functionName: "Get Story Variable (float)"
+          args {
+            string_value: "545e82f23362655810005f46"
+          }
+          args {
+            string_value: "INF_Wiseman"
+          }
+        }
+      }
+      args {
+        float_value: 1
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b4cf45d3363329711ca7ec0"
+  }
+  index: 12
+  text: "Anyways..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cf4dc3363329711ca7ed0"
+  }
+  index: 13
+  text: "{{GM}}Woah! Wiseman got hot quick.{{/GM}}\n\nI\'m gonna pretend you didn\'t say anything.\n\nNow..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "54836fcf3362657014007c9e"
+  }
+  index: 14
   text: "What kind of coincidence is it that we run into Renraku, not once, but twice. We shouldn\'t have encountered anyone representing them the two times we were together."
   branches {
     responseText: "A fragging big one."
-    nextNodeIndex: 10
+    nextNodeIndex: 15
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -211,11 +541,11 @@ nodes {
   idRef {
     id: "548370583362657014007ca4"
   }
-  index: 10
+  index: 15
   text: "You got it, $+(l.name).\n\nThat suit has to be connected to sis\' digital death."
   branches {
     responseText: ""
-    nextNodeIndex: 11
+    nextNodeIndex: 16
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -223,7 +553,7 @@ nodes {
   idRef {
     id: "548370913362657014007ca7"
   }
-  index: 11
+  index: 16
   text: "You and I both heard them talking about \'offerings\' and other dark bulldrek...\n\nThere\'s zero doubt in my mind that those two fragheads aren\'t involved some larger conspiracy."
   branches {
     responseText: ""
@@ -312,6 +642,362 @@ nodes {
     auxiliaryLink: true
   }
   nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4ce98d3363329711ca7ddb"
+  }
+  index: 17
+  text: "Wiseman scratches the back of his head. It\'s in a manner that\'s uncharacteristic of him."
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_etiquetteEscape"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 18
+  }
+  branches {
+    responseText: ""
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_etiquetteEscape"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 25
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4cea923363329711ca7ddf"
+  }
+  index: 18
+  text: "He puts his hand back down. Must\'ve been a bad itch...\n\nYou\'re beginning to see he\'s getting mad, almost like the Kool-Aid tri-vids..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 19
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4ceafe3363329711ca7de2"
+  }
+  index: 19
+  text: "We didn\'t even get to see if she--\n\n{{GM}}Tears begin to well up in his eyes.{{/GM}}\n\nWe didn\'t even get to see if Raleigh was alive."
+  branches {
+    responseText: "Chummer, this ain\'t a soap."
+    nextNodeIndex: 20
+  }
+  branches {
+    responseText: "{{GM}}Hug him.{{/GM}}"
+    nextNodeIndex: 21
+  }
+  branches {
+    responseText: "Wiseman, you can spend your share on a sex change."
+    nextNodeIndex: 24
+  }
+  branches {
+    responseText: "{{GM}}Pat him on the back.{{/GM}} C\'mon, buddy, we gotta bail."
+    nextNodeIndex: -1
+    comment: "INFLUENCE NEUTRAL"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4ceb7a3363329711ca7de5"
+  }
+  index: 20
+  text: "HEY! Frag you, $+(l.name), just frag you.\n\nI thought you were my friend.\n\n{{GM}}You have lost influence (-1) with Wiseman.{{/GM}}"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (float)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "INF_Wiseman"
+            }
+          }
+        }
+        args {
+          float_value: -1
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "INFLUENCE LOST"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cecf03363329711ca7de9"
+  }
+  index: 21
+  text: "You hug him. It lasts briefly."
+  branches {
+    responseText: ""
+    nextNodeIndex: 22
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4ced3f3363329711ca7dec"
+  }
+  index: 22
+  text: "{{GM}}He lightens up.{{/GM}}\n\nThanks, $+(l.name), I keep thinking we could\'ve done something for Raleigh back at Tenpenny, but...\n\n{{GM}}Suddenly, you feel him become bereft of all emotion, and his face hardens.{{/GM}}\n\nThere\'s nothing we could\'ve done..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 23
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cede23363329711ca7def"
+  }
+  index: 23
+  text: "You have gained influence (+1) with Wiseman."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (float)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "INF_Wiseman"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "INFLUENCE GAINED"
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4cefdb3363329711ca7e8c"
+  }
+  index: 24
+  text: "He just glares at you.\n\nWhatever he was or was not feeling, you\'ve defused it. Intrigueing."
+  branches {
+    responseText: "{{GM}}Pat him on the back.{{/GM}} C\'mon, buddy, we gotta bail."
+    nextNodeIndex: -1
+    comment: "INFLUENCE NEUTRAL"
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4ceafe3363329711ca7de2"
+  }
+  index: 25
+  text: "THAT WHORE!!!\n\n{{GM}}Tears begin to well up in his eyes. Wasn\'t he just angry? Wow.{{/GM}}\n\nI never... I never got to say goodbye to her, or tell her that I love her."
+  branches {
+    responseText: "Chummer, this ain\'t a soap."
+    nextNodeIndex: 26
+  }
+  branches {
+    responseText: "{{GM}}Hug him.{{/GM}}"
+    nextNodeIndex: 27
+  }
+  branches {
+    responseText: "Wiseman, you can spend your share on a sex change."
+    nextNodeIndex: 30
+  }
+  branches {
+    responseText: "{{GM}}Pat him on the back.{{/GM}} C\'mon, buddy, we gotta bail."
+    nextNodeIndex: -1
+    comment: "INFLUENCE NEUTRAL"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4ceb7a3363329711ca7de5"
+  }
+  index: 26
+  text: "HEY! Frag you, $+(l.name), just frag you.\n\nI thought you were my friend.\n\n{{GM}}You have lost influence (-1) with Wiseman.{{/GM}}"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (float)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "INF_Wiseman"
+            }
+          }
+        }
+        args {
+          float_value: -1
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "INFLUENCE LOST"
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cecf03363329711ca7de9"
+  }
+  index: 27
+  text: "You hug him. It lasts briefly."
+  branches {
+    responseText: ""
+    nextNodeIndex: 28
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4ced3f3363329711ca7dec"
+  }
+  index: 28
+  text: "{{GM}}He lightens up.{{/GM}}\n\nThanks, $+(l.name), I keep thinking we could\'ve done something for Raleigh back at Tenpenny, but...\n\n{{GM}}Suddenly, you feel him become bereft of all emotion, and his face hardens.{{/GM}}\n\nThere\'s nothing we could\'ve done..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 29
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4cede23363329711ca7def"
+  }
+  index: 29
+  text: "You have gained influence (+1) with Wiseman."
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Add To Variable (float)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (float)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "INF_Wiseman"
+            }
+          }
+        }
+        args {
+          float_value: 1
+        }
+      }
+    }
+    nextNodeIndex: -1
+    comment: "INFLUENCE GAINED"
+  }
+  nodeType: ConversationNodeType_GM_Voice
+}
+nodes {
+  idRef {
+    id: "5b4cefdb3363329711ca7e8c"
+  }
+  index: 30
+  text: "He just glares at you.\n\nWhatever he was or was not feeling, you\'ve defused it. Intrigueing."
+  branches {
+    responseText: "{{GM}}Pat him on the back.{{/GM}} C\'mon, buddy, we gotta bail."
+    nextNodeIndex: -1
+    comment: "INFLUENCE NEUTRAL"
+  }
+  nodeType: ConversationNodeType_GM_Voice
 }
 roots {
   nextNodeIndex: 0

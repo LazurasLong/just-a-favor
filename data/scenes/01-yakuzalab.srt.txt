@@ -2198,6 +2198,17 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Send Event"
+      args {
+        call_value {
+          functionName: "Get Map Item (Event)"
+          args {
+            string_value: "EnableAPG"
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -5719,6 +5730,28 @@ triggers {
         }
       }
     }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "apg_enable"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
   }
   isActive: true
   idRef {
@@ -7554,6 +7587,337 @@ triggers {
   }
   is_oneshot: false
 }
+triggers {
+  name: "FacOutside_APGenable"
+  events {
+    ops {
+      functionName: "Get Map Item (Event)"
+      args {
+        string_value: "EnableAPG"
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "apg_enable"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b4cb2e5336332f260446ba8"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
+triggers {
+  name: "FacOutside_APGuse"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5b4cb2ad336332f260446ba7"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+    ops {
+      functionName: "Compare Actor Skill"
+      args {
+        call_value {
+          functionName: "Triggering Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "BaseOrCurrent"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "ActorSkills"
+          }
+          args {
+            int_value: 10
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Comparison Ops"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+      args {
+        int_value: 4
+      }
+    }
+  }
+  actions {
+    ops {
+      functionName: "Display Text over Prop"
+      args {
+        call_value {
+          functionName: "Get Map Item (Prop)"
+          args {
+            string_value: "5b4cb2ad336332f260446ba7"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "TextPopupStyle"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        string_value: "FAILURE. (Drone Control >= 4)"
+      }
+      args {
+        float_value: 0.73
+      }
+      args {
+        float_value: 0.07
+      }
+      args {
+        float_value: 0.09
+      }
+      args {
+        float_value: 1
+      }
+      args {
+        float_value: 5
+      }
+      args {
+        float_value: 3
+      }
+      args {
+        float_value: 0
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b4cb394336332f260446baa"
+  }
+  elseActions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5b4cb3b0336332f260446bab"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  is_oneshot: false
+}
+triggers {
+  name: "FacOutside_APGuse2"
+  events {
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "Cause Damage Over Time"
+      args {
+        call_value {
+          functionName: "All Actors With Tag"
+          args {
+            call_value {
+              functionName: "Get Map Item (SenseTagList)"
+              args {
+                string_value: "turretz"
+              }
+            }
+          }
+          args {
+            call_value {
+              functionName: "Get Preset Value (int)"
+              args {
+                string_value: "AllOrAny"
+              }
+              args {
+                int_value: 0
+              }
+            }
+          }
+        }
+      }
+      args {
+        int_value: 10
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "HPOrAP"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        int_value: 6
+      }
+    }
+    ops {
+      functionName: "Set Variable (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "apg_enable"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5b4cb394336332f260446baa"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Enable/Disable Trigger"
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "EnableOrDisable"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5b4cb3b0336332f260446bab"
+          }
+        }
+      }
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b4cb3b0336332f260446bab"
+  }
+  elseActions {
+  }
+  is_oneshot: false
+}
 regions {
   name: "CorruptedDoper_TlkRegn"
   position {
@@ -8581,10 +8945,14 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
       stats {
+        body: -3
+        hp: -30
+        armor: -2
         morale: 0
         discipline: 0
         awareness: 0
@@ -8610,6 +8978,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 59
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -8677,10 +9046,14 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
       stats {
+        body: -3
+        hp: -30
+        armor: -2
         morale: 0
         discipline: 0
         awareness: 0
@@ -8706,6 +9079,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 59
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -8814,10 +9188,14 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
       stats {
+        body: -3
+        hp: -30
+        armor: -1
         morale: 0
         discipline: 0
         awareness: 0
@@ -8843,6 +9221,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 59
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -9422,12 +9801,31 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
+      stats {
+        body: -2
+        hp: -20
+        armor: -2
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_MeleeSoldier"
       attitude: AttitudeCautious
       attackRandom: AttackStyle_CycleAll
+      vulnerabilities {
+      }
     }
     team_id: "Shadow Cultists"
     char_name: "Feral Ghoul"
@@ -9437,6 +9835,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 62
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -9455,12 +9854,31 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
+      stats {
+        body: -2
+        hp: -15
+        armor: -2
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_MeleeSoldier"
       attitude: AttitudeCautious
       attackRandom: AttackStyle_CycleAll
+      vulnerabilities {
+      }
     }
     team_id: "Shadow Cultists"
     char_name: "Feral Ghoul"
@@ -9470,6 +9888,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 62
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -9488,12 +9907,31 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
+      stats {
+        body: -3
+        hp: -30
+        ap: -2
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_MeleeSoldier"
       attitude: AttitudeCautious
       attackRandom: AttackStyle_CycleAll
+      vulnerabilities {
+      }
     }
     team_id: "Shadow Cultists"
     char_name: "Feral Ghoul"
@@ -9503,6 +9941,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 59
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -9521,12 +9960,31 @@ characters {
   }
   lod: 0
   character_instance {
+    prefab_name: "Seattle:Core/HumanMale"
     character_sheet_id: "Ghoul_Lv1"
     equipment_sheet_id: "Ghoul_Lv1_Gear"
     character_mod {
+      stats {
+        body: -3
+        hp: -30
+        ap: -2
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+      }
+      skills {
+      }
+      specializations {
+      }
       archetypeName: "gumbo_MeleeSoldier"
       attitude: AttitudeCautious
       attackRandom: AttackStyle_CycleAll
+      vulnerabilities {
+      }
     }
     team_id: "Shadow Cultists"
     char_name: "Feral Ghoul"
@@ -9536,6 +9994,7 @@ characters {
     portrait {
       filename: ""
     }
+    karma: 59
     hiring_set_randomizer: "ghoul"
     scale_character_sheet: true
   }
@@ -10041,6 +10500,8 @@ characters {
       skills {
       }
       specializations {
+      }
+      vulnerabilities {
       }
     }
     team_id: "Civilians"
@@ -11482,6 +11943,14 @@ variables {
     typeName: "bool"
   }
 }
+variables {
+  bool_value: false
+  variableref_value {
+    scope: TsVariableScope_Scene
+    name: "apg_enable"
+    typeName: "bool"
+  }
+}
 mapEvents: "JunkieOnDeath"
 mapEvents: "DisableMiddleGates"
 mapEvents: "EnableMiddleGates"
@@ -11489,6 +11958,7 @@ mapEvents: "MatrixKillCounter"
 mapEvents: "FacGuardKillCounter"
 mapEvents: "FacOutsideRndCnt"
 mapEvents: "FinaleKillCounter"
+mapEvents: "EnableAPG"
 senseTags: "isWiseman"
 goals {
   name: "Reacquire BTL Laboratory"
