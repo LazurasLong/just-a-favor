@@ -7826,7 +7826,7 @@ triggers {
         }
       }
       args {
-        int_value: 10
+        int_value: 5
       }
       args {
         call_value {
@@ -10008,6 +10008,7 @@ characters {
   }
   orientation: ORIENTATION_N
   GeneralTags: "facguard_outside"
+  GeneralTags: "fo_ppl"
   displayName: "facguard_talker"
   idRef {
     id: "54811163336265240b0039bf"
@@ -10100,6 +10101,7 @@ characters {
     team_id: "Civilians"
     char_name: "Facility Guard"
     GeneralTags: "facguard_outside"
+    GeneralTags: "fo_ppl"
     pc_spawn_number: -1
     cyberware_jack: "Datajack"
     portrait {
@@ -10117,6 +10119,7 @@ characters {
   }
   orientation: ORIENTATION_N
   GeneralTags: "facguard_outside"
+  GeneralTags: "fo_ppl"
   displayName: "facguard"
   idRef {
     id: "548112a4336265240b0039c0"
@@ -10209,6 +10212,7 @@ characters {
     team_id: "Civilians"
     char_name: "Facility Guard"
     GeneralTags: "facguard_outside"
+    GeneralTags: "fo_ppl"
     pc_spawn_number: -1
     cyberware_jack: "Datajack"
     portrait {
@@ -10226,6 +10230,7 @@ characters {
   }
   orientation: ORIENTATION_S
   GeneralTags: "facguard_outside"
+  GeneralTags: "fo_ppl"
   idRef {
     id: "548112b5336265240b0039c1"
   }
@@ -10299,6 +10304,7 @@ characters {
     team_id: "Civilians"
     char_name: "Cultaa Inishi"
     GeneralTags: "facguard_outside"
+    GeneralTags: "fo_ppl"
     pc_spawn_number: -1
     portrait {
       filename: ""
@@ -10315,6 +10321,7 @@ characters {
   }
   orientation: ORIENTATION_E
   GeneralTags: "facguard_outside"
+  GeneralTags: "fo_ppl"
   idRef {
     id: "548113ae336265240b0039c3"
   }
@@ -10388,6 +10395,7 @@ characters {
     team_id: "Civilians"
     char_name: "Cultaa Inishi"
     GeneralTags: "facguard_outside"
+    GeneralTags: "fo_ppl"
     pc_spawn_number: -1
     portrait {
       filename: ""

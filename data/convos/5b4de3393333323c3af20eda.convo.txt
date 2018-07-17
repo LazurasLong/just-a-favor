@@ -1,0 +1,92 @@
+idRef {
+  id: "5b4de3393333323c3af20eda"
+}
+ui_name: "sybrespace_cyberware"
+nodes {
+  idRef {
+    id: "5b4de39a3363323c3af20ee0"
+  }
+  index: 0
+  text: "Oh! You must be $+(l.name).\n\nWhat can I do for you?"
+  branches {
+    responseText: "The one and only."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "{{GM}}Browse medical supplies.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{GM}}Browse cyberware.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have to go."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b4de3e93363323c3af20ee3"
+  }
+  index: 1
+  text: "Quite.\n\n{{GM}}Her lips slightly purse, if you could even call that a smile.{{/GM}}"
+  branches {
+    responseText: "{{GM}}Browse medical supplies.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Store Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "{{GM}}Browse cyberware.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Cyberware Screen From Actor"
+        args {
+          call_value {
+            functionName: "Triggering Target Actor"
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "I have to go."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  responseText: ""
+  nextNodeIndex: 0
+}
