@@ -23992,3 +23992,35 @@ props {
   }
   lod: 0
 }
+props {
+  name: "sushibar_furniture_foodcounter03"
+  gridPoint {
+    x: 30
+    y: 0
+    z: -21.7
+  }
+  orientation: ORIENTATION_W
+  lod: 0
+}
+props {
+  name: "tenements_clutter_cigarettePile"
+  gridPoint {
+    x: 30.1
+    y: 1
+    z: -21.7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b4fed2c336332cc1d234acb"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "HealthPack_med"
+      destroyOnPickup: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}

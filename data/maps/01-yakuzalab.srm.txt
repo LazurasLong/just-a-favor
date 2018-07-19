@@ -28743,7 +28743,7 @@ props {
   }
   lod: 0
   character_instance {
-    prefab_name: "Seattle:Core/TrollMale"
+    prefab_name: "Seattle:Spirit/SpiritAbomination"
     character_sheet_id: "Spirit Abomination"
     character_mod {
       stats {
