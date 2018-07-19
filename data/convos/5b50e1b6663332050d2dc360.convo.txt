@@ -1,0 +1,36 @@
+idRef {
+  id: "5b50e1b6663332050d2dc360"
+}
+ui_name: "sybrespace_kane"
+nodes {
+  idRef {
+    id: "5b50e1fb336332050d2dc366"
+  }
+  index: 0
+  text: "Care to travel to beyond the Veil?\n\nI can take you to the realm beyond the fourth."
+  branches {
+    responseText: "Yes. {{GM}}Enter GM room.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Open Scene"
+        args {
+          call_value {
+            functionName: "Get Map Item (Scene)"
+            args {
+              string_value: "00-debug"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  branches {
+    responseText: "No."
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

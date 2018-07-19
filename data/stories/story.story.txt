@@ -192,6 +192,18 @@ variables {
   }
 }
 variables {
+  name: "RELEASE"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "RELEASE"
+      typeName: "bool"
+    }
+  }
+}
+variables {
   name: "S1_justdidm00"
   typeName: "bool"
   defaultValue {

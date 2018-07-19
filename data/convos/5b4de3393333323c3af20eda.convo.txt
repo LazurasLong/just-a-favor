@@ -19,7 +19,10 @@ nodes {
         functionName: "Open Store Screen From Actor"
         args {
           call_value {
-            functionName: "Triggering Target Actor"
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5b4de55d336332103cf20ee3"
+            }
           }
         }
       }
@@ -33,7 +36,10 @@ nodes {
         functionName: "Open Cyberware Screen From Actor"
         args {
           call_value {
-            functionName: "Triggering Target Actor"
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5b4de55d336332103cf20ee3"
+            }
           }
         }
       }
@@ -59,7 +65,10 @@ nodes {
         functionName: "Open Store Screen From Actor"
         args {
           call_value {
-            functionName: "Triggering Target Actor"
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5b4de55d336332103cf20ee3"
+            }
           }
         }
       }
@@ -73,7 +82,10 @@ nodes {
         functionName: "Open Cyberware Screen From Actor"
         args {
           call_value {
-            functionName: "Triggering Target Actor"
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "5b4de55d336332103cf20ee3"
+            }
           }
         }
       }

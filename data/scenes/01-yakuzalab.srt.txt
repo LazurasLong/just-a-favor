@@ -9898,7 +9898,7 @@ characters {
       }
     }
     team_id: "Shadow Cultists"
-    char_name: "Feral Ghoul"
+    char_name: "Former Junkie"
     GeneralTags: "goolz2"
     enabled_at_start: false
     pc_spawn_number: -1
@@ -9951,7 +9951,7 @@ characters {
       }
     }
     team_id: "Shadow Cultists"
-    char_name: "Feral Ghoul"
+    char_name: "Former Junkie"
     GeneralTags: "goolz2"
     enabled_at_start: false
     pc_spawn_number: -1
@@ -10004,7 +10004,7 @@ characters {
       }
     }
     team_id: "Shadow Cultists"
-    char_name: "Feral Ghoul"
+    char_name: "Former Junkie"
     GeneralTags: "goolz2"
     enabled_at_start: false
     pc_spawn_number: -1
@@ -10057,7 +10057,7 @@ characters {
       }
     }
     team_id: "Shadow Cultists"
-    char_name: "Feral Ghoul"
+    char_name: "Former Junkie"
     GeneralTags: "goolz2"
     enabled_at_start: false
     pc_spawn_number: -1
