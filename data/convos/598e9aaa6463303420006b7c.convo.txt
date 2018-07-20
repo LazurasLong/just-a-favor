@@ -7,7 +7,7 @@ nodes {
     id: "598e9ab86463303420006b82"
   }
   index: 0
-  text: "{{GM}} If double-startled\'s not a term, you just coined it. This LoneStar officer is sweating bullets already in fear about something and upon seeing your arrival...{{/GM}}\n\nHe-...-He...-- ...Hey!\n\nStop right... stop, right there!\n"
+  text: "{{GM}} If double-startled\'s not a term, you just coined it. This LoneStar officer is sweating bullets, already in fear about something upon seeing your arrival...{{/GM}}\n\nHe-...-He...-- ...Hey!\n\nStop right... stop, right there!\n"
   branches {
     responseText: ""
     nextNodeIndex: 1
@@ -30,6 +30,25 @@ nodes {
           functionName: "Get Map Item (Animation)"
           args {
             string_value: "Seattle:General/standing_aiming_pistol"
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Play Animation From Manifest"
+      args {
+        call_value {
+          functionName: "Get Map Item (Actor)"
+          args {
+            string_value: "5b51e06f3363327546f55983"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Map Item (Animation)"
+          args {
+            string_value: "Seattle:General/standing_idle_cower"
           }
         }
       }
@@ -83,7 +102,6 @@ nodes {
       }
     }
     nextNodeIndex: 2
-    hideIfUnavailable: true
   }
   branches {
     responseText: "Are you unaware of all the damn chrome pointing your way or what..."
@@ -132,7 +150,46 @@ nodes {
     responseText: "{{GM}}Execute the Star before he fires one off.{{/GM}}"
     actions {
       ops {
-        functionName: "No Effect"
+        functionName: "Attack Actor With Weapon"
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Random Actor on Team"
+                args {
+                  call_value {
+                    functionName: "Get Preset Value (string)"
+                    args {
+                      string_value: "FactionList"
+                    }
+                    args {
+                      int_value: 0
+                    }
+                  }
+                }
+                args {
+                  call_value {
+                    functionName: "Get Map Item (SceneDimension)"
+                    args {
+                      string_value: "Default"
+                    }
+                  }
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Actor)"
+            args {
+              string_value: "594bc8ce326336c0070078a3"
+            }
+          }
+        }
       }
       ops {
         functionName: "Trigger: Run Alternate Trigger"
@@ -191,12 +248,14 @@ nodes {
   index: 2
   text: "Rate of movement slowed, his body language speaks of shock as he slowly clicks his vocoder...\n\nWhat little color the already pale chum had swiftly melts of his face."
   branches {
-    responseText: "CASE: MOB/YAK WAR DIVERSION"
+    responseText: ""
     nextNodeIndex: -1
+    comment: "CASE: MOB/YAK WAR DIVERSION"
   }
   branches {
-    responseText: "CASE: KOOKY KULTIST DIVERSION"
+    responseText: ""
     nextNodeIndex: -1
+    comment: "CASE: KOOKY KULTIST DIVERSION"
   }
   nodeType: ConversationNodeType_InputKeyboard
 }
