@@ -688,3 +688,190 @@ props {
     intensity: 5
   }
 }
+props {
+  name: "lodge_tech_hellWallMonitor02"
+  gridPoint {
+    x: -5.8
+    y: 1
+    z: 0.4
+  }
+  orientation: ORIENTATION_E
+  lod: 0
+}
+props {
+  name: "lodge_tech_hellWallMonitor02"
+  gridPoint {
+    x: -5.8
+    y: 1
+    z: 3.4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5b512186336332c42a786773"
+  }
+  lod: 0
+}
+props {
+  name: "lodge_tech_hellWallMonitor02"
+  gridPoint {
+    x: -5.8
+    y: 1
+    z: 6.4
+  }
+  orientation: ORIENTATION_E
+  idRef {
+    id: "5b512188336332c42a786774"
+  }
+  lod: 0
+}
+props {
+  name: "lodge_tech_hellWallMonitor02"
+  gridPoint {
+    x: -5.4
+    y: 0.75
+    z: -0.6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b51218e336332c42a786775"
+  }
+  lod: 0
+}
+props {
+  name: "lodge_tech_hellWallMonitor02"
+  gridPoint {
+    x: -2.4
+    y: 0.75
+    z: -0.6
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b51219d336332c42a786776"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_smokeyFire"
+  gridPoint {
+    x: -4.8
+    y: 1
+    z: -0.5
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "Berlin:EnvironmentSmokeyFire"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_smokeyFire"
+  gridPoint {
+    x: -1.8000002
+    y: 1
+    z: -0.5
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "Berlin:EnvironmentSmokeyFire"
+  }
+  idRef {
+    id: "5b512455336332c42a7867b4"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_smokeyFire"
+  gridPoint {
+    x: -5.5
+    y: 1.2
+    z: 0.9
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "Berlin:EnvironmentSmokeyFire"
+  }
+  lod: 0
+}
+props {
+  name: "vfx_fx_smokeyFire"
+  gridPoint {
+    x: -5.5
+    y: 1.2
+    z: 6.9
+  }
+  orientation: ORIENTATION_S
+  properties {
+    property_id: "fxScript"
+    string_value: "Berlin:EnvironmentSmokeyFire"
+  }
+  idRef {
+    id: "5b51247b336332c42a7867b5"
+  }
+  lod: 0
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: -5.7
+    y: 0.7
+    z: -0.3
+  }
+  orientation: ORIENTATION_S
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.86274511
+      g: 0.15294118
+      b: 0.22352941
+    }
+    intensity: 3.5
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: -5.7
+    y: 0.7
+    z: 5.7
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b5124e3336332c42a7867b7"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.86274511
+      g: 0.15294118
+      b: 0.22352941
+    }
+    intensity: 3.5
+  }
+}
+props {
+  name: "system_gizmo_lightbulb"
+  gridPoint {
+    x: -2.6999998
+    y: 0.7
+    z: -1.0000002
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b5124e7336332c42a7867b8"
+  }
+  lod: 0
+  light {
+    range: 5
+    color {
+      r: 0.86274511
+      g: 0.15294118
+      b: 0.22352941
+    }
+    intensity: 3.5
+  }
+}

@@ -6066,11 +6066,13 @@ characters {
     char_name: "Kane"
     enabled_at_start: false
     pc_spawn_number: -1
+    hiring_type: HiringType_None
     portrait {
       filename: "npc_humanmale_hansbrackhaus"
     }
     portrait_code_override: ""
     karma: 34
+    hiring_cost_override: 1000
   }
 }
 variables {
