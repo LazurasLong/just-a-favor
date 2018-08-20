@@ -756,6 +756,36 @@ triggers {
   }
   is_oneshot: true
 }
+triggers {
+  name: "Van_rearInteract"
+  events {
+    ops {
+      functionName: "On Item Interaction"
+      args {
+        call_value {
+          functionName: "Get Map Item (InteractableObject)"
+          args {
+            string_value: "5b7ae7003363322773540c27"
+          }
+        }
+      }
+    }
+  }
+  conditions {
+  }
+  actions {
+    ops {
+      functionName: "No Effect"
+    }
+  }
+  isActive: true
+  idRef {
+    id: "5b7ae7893363322773540c29"
+  }
+  elseActions {
+  }
+  is_oneshot: true
+}
 regions {
   name: "Camera-EXTERIOR"
   position {
@@ -894,12 +924,58 @@ regions {
   loop_default_music: false
   no_fow_in_region: false
 }
+regions {
+  name: "Camera-MSTF_Rescue"
+  position {
+    x: -193
+    y: -61
+    width: 85
+    height: 158
+  }
+  enabledAtStart: true
+  is_camera_region: true
+  idRef {
+    id: "5b7ae4b63363322773540c08"
+  }
+  highlight_color {
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  }
+  visible_at_start: false
+  is_closet: false
+  is_teleporter_region: false
+  directional_light_dir {
+    x: -0.5
+    y: 0.35
+    z: -0.75
+  }
+  directional_light_color {
+    r: 0.43137255
+    g: 0.4627451
+    b: 0.078431375
+    a: 1
+  }
+  ambient_light_color {
+    r: 0.28235295
+    g: 0.3019608
+    b: 0.36470589
+    a: 1
+  }
+  ambience_template: "downtown-night"
+  combat_music: ""
+  default_music: "Seattle-Set3-Stealth"
+  loop_combat_music: true
+  loop_default_music: true
+  no_fow_in_region: false
+}
 characters {
   name: "system_spawner_playerSpawner"
   gridPoint {
-    x: -6
+    x: -131
     y: 0
-    z: 9
+    z: -11
   }
   orientation: ORIENTATION_S
   displayName: "P1"
@@ -1589,6 +1665,106 @@ characters {
     hiring_cost_override: 0
     hiring_tag: "Crew / Spirit Detective"
     id: "ghamal_level2"
+  }
+}
+characters {
+  name: "chars_icon_playerIcon"
+  gridPoint {
+    x: -140.7
+    y: 0
+    z: -10
+  }
+  orientation: ORIENTATION_E
+  displayName: "van_driver"
+  idRef {
+    id: "5b7ae72e3363322773540c28"
+  }
+  lod: 0
+  character_instance {
+    character_sheet_id: "Lvl1_Dwarf_Rigger"
+    character_mod {
+      stats {
+        body: 0
+        quickness: 0
+        strength: 0
+        charisma: 0
+        intelligence: 0
+        willpower: 0
+        essence: 0
+        magic: 0
+        hp: 0
+        ap: 0
+        armor: 0
+        force: 0
+        morale: 0
+        discipline: 0
+        awareness: 0
+        perception: 0
+        authority: 0
+        protect_tether_range: 0
+        move_speed: 0
+        vision_peripheral_distance: 0
+        vision_cone_distance: 0
+        vision_cone_angle: 0
+      }
+      skills {
+        ranged_combat: 0
+        close_combat: 0
+        throwing_weapons: 0
+        spellcasting: 0
+        decking: 0
+        conjuring: 0
+        spirit_summoning: 0
+        drone_control: 0
+        biotech: 0
+        dodge: 0
+        etiquette_corporate: 0
+        etiquette_security: 0
+        etiquette_gang: 0
+        etiquette_socialite: 0
+        chi_casting: 0
+        etiquette_shadowrunner: 0
+        etiquette_street: 0
+        etiquette_academic: 0
+      }
+      specializations {
+        pistol: 0
+        rifle: 0
+        shotgun: 0
+        smg: 0
+        edged: 0
+        unarmed: 0
+        spirit_control: 0
+        esp_control: 0
+        drone_combat: 0
+      }
+      archetypeName: "Guard - Protect"
+      attitude: AttitudeAggressive
+      vulnerabilities {
+      }
+    }
+    equipment {
+      prefab_name: "SMG 1 Beretta Model 70"
+    }
+    equipment {
+      prefab_name: "DroneAttackC_Doberman"
+    }
+    equipment {
+      prefab_name: "DroneRepairKit"
+    }
+    equipment {
+      prefab_name: "HealthPack"
+    }
+    team_id: "Civilians"
+    char_name: "Overdrive"
+    pc_spawn_number: -1
+    hiring_type: HiringType_Hireable
+    cyberware_jack: "Datajack"
+    karma: 1
+    hiring_cost_override: 1075
+    hiring_set_randomizer: "dwarf_rigger"
+    hiring_tag: "Rigger"
+    id: "Lvl1_Dwarf_Rigger"
   }
 }
 variables {
