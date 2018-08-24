@@ -1,0 +1,566 @@
+idRef {
+  id: "5b7eb12233633237227cc473"
+}
+ui_name: "01-yla-overdrive"
+nodes {
+  idRef {
+    id: "5b7eb14133633237227cc479"
+  }
+  index: 0
+  text: "He\'s covered in soot, his face not getting any less muddied as he frantically wipes it with an already dirty handkerchief. The dumpshock that the dwarf is clearly displaying probably isn\'t making any matters easier for him."
+  branches {
+    responseText: "What the frag just happened?"
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Clear All Waypoints"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7eb1cc33633237227cc47d"
+  }
+  index: 1
+  text: "Boss!\n\n{{GM}}He groans.{{/GM}}\n\nWe just about totalled our getaway ride. I was able to prevent an engine sieze through the rig..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7eb39533633237227cc480"
+  }
+  index: 2
+  text: "But...\n\nI have a killer case of dumpshock.\n\n{{GM}}He finishes of that last bit, while fumbling in his pocket, and subsequently pulling out a small pill bottle.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7eb46a33633237227cc483"
+  }
+  index: 3
+  text: "For the pain."
+  branches {
+    responseText: "Really, coghead? Wrong neck of the woods to be geetting high, pal."
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "Cut to the chase."
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4084336332cb23140546"
+  }
+  index: 4
+  text: "It\'s only Tylenol! I swear."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f409a336332cb23140549"
+  }
+  index: 5
+  text: "I happen to know this area. \n\nI am, after all, your friendly neighborhood get-away driver."
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f41b1336332cb23140552"
+  }
+  index: 6
+  text: "{{GM}}He puts his hand on his chin, combing his meaty fingers through his beard.{{/GM}}\n\nHorny Mike. He\'s a troll, runs a junkyard of sorts. Diamond Suede Dixon."
+  branches {
+    responseText: "Excuse me?"
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4282336332cb23140555"
+  }
+  index: 7
+  text: "Diamond Suede Dixon. It\'s code!\n\nThis your first day or what?"
+  branches {
+    responseText: "With you, smart-ass."
+    nextNodeIndex: 8
+  }
+  branches {
+    responseText: "Just tell me what I need to fix the van."
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f431d336332cb23140559"
+  }
+  index: 8
+  text: "Eh-hueh.\n\n{{GM}}He motions a fake cough.{{/GM}}\n\nYou\'re probably wandering what we need to fix this baby. Good thing I brought my drone, Pappy, with me."
+  branches {
+    responseText: ""
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4349336332cb2314055c"
+  }
+  index: 9
+  text: "The dwarf hands you a list."
+  branches {
+    responseText: "Wiz. Ghamal? Time to show me what you\'re made of."
+    nextNodeIndex: 10
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "01a_parts_list"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f43f5336332cb2314055f"
+  }
+  index: 10
+  text: "What?! By carrying parts?!"
+  branches {
+    responseText: "This isn\'t a trivid, Ghamal. Let\'s go."
+    actions {
+      ops {
+        functionName: "Set Waypoint on Prop"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PrimaryOrSecondary"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "5b7f44af336332cb23140586"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+nodes {
+  idRef {
+    id: "5b7eb14133633237227cc479"
+  }
+  index: 11
+  text: "She\'s covered in soot, her face not getting any less muddied as she frantically wipes it with an already dirty handkerchief. The dumpshock that the dwarf is clearly displaying probably isn\'t making any matters easier for her."
+  branches {
+    responseText: "What the frag just happened?"
+    nextNodeIndex: 12
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Clear All Waypoints"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7eb1cc33633237227cc47d"
+  }
+  index: 12
+  text: "Boss!\n\n{{GM}}She moans.{{/GM}}\n\nWe just about totalled our getaway ride. I was able to prevent an engine sieze through the rig..."
+  branches {
+    responseText: ""
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7eb39533633237227cc480"
+  }
+  index: 13
+  text: "But...\n\nI have a killer case of dumpshock.\n\n{{GM}}She finishes of that last bit, while fumbling in her pocket, and subsequently pulling out a small pill bottle.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7eb46a33633237227cc483"
+  }
+  index: 14
+  text: "For the pain."
+  branches {
+    responseText: "Really, coghead? Wrong neck of the woods to be geetting high, princess."
+    nextNodeIndex: 15
+  }
+  branches {
+    responseText: "Cut to the chase."
+    nextNodeIndex: 16
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4084336332cb23140546"
+  }
+  index: 15
+  text: "It\'s only Tylenol! I swear."
+  branches {
+    responseText: ""
+    nextNodeIndex: 16
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f409a336332cb23140549"
+  }
+  index: 16
+  text: "I happen to know this area. \n\nI am, after all, your friendly neighborhood get-away driver."
+  branches {
+    responseText: ""
+    nextNodeIndex: 17
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f41b1336332cb23140552"
+  }
+  index: 17
+  text: "{{GM}}She puts her hand on her chin, combing her meaty fingers across her dwarvenly chin.{{/GM}}\n\nHorny Mike. He\'s a troll, runs a junkyard of sorts. Diamond Suede Dixon."
+  branches {
+    responseText: "Excuse me?"
+    nextNodeIndex: 18
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4282336332cb23140555"
+  }
+  index: 18
+  text: "Diamond Suede Dixon. It\'s code!\n\nThis your first day or what?"
+  branches {
+    responseText: "With you, smart-ass."
+    nextNodeIndex: 19
+  }
+  branches {
+    responseText: "Just tell me what I need to fix the van."
+    nextNodeIndex: 20
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f431d336332cb23140559"
+  }
+  index: 19
+  text: "Eh-hueh.\n\n{{GM}}She motions a fake cough.{{/GM}}\n\nYou\'re probably wandering what we need to fix this baby. Good thing I brought my drone, Pappy, with me."
+  branches {
+    responseText: ""
+    nextNodeIndex: 20
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4349336332cb2314055c"
+  }
+  index: 20
+  text: "The dwarf hands you a list."
+  branches {
+    responseText: "Wiz. Ghamal? Time to show me what you\'re made of."
+    nextNodeIndex: 21
+  }
+  nodeType: ConversationNodeType_GM_Voice
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "01a_parts_list"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f43f5336332cb2314055f"
+  }
+  index: 21
+  text: "What?! By carrying parts?!"
+  branches {
+    responseText: "This isn\'t a trivid, Ghamal. Let\'s go."
+    actions {
+      ops {
+        functionName: "Set Waypoint on Prop"
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "PrimaryOrSecondary"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Map Item (Prop)"
+            args {
+              string_value: "5b7f44af336332cb23140586"
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "van_fixed_yet"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Gender"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Gender"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 0
+}
+roots {
+  conditions {
+    ops {
+      functionName: "Comparison (bool)"
+      args {
+        call_value {
+          functionName: "Get Variable (bool)"
+          args {
+            string_value: "van_fixed_yet"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "bool"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+    ops {
+      functionName: "Compare Actor Gender"
+      args {
+        call_value {
+          functionName: "Triggering Target Actor"
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "IsOrIsNot"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "Gender"
+          }
+          args {
+            int_value: 2
+          }
+        }
+      }
+    }
+  }
+  nextNodeIndex: 11
+}

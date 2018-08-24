@@ -1,0 +1,299 @@
+idRef {
+  id: "5b7f4def336332cb23140602"
+}
+ui_name: "01-yla-hornymike"
+nodes {
+  idRef {
+    id: "5b7f4e09336332cb23140608"
+  }
+  index: 0
+  text: "Yeah?"
+  branches {
+    responseText: "Yo, Diamond Suede Dixon."
+    nextNodeIndex: 1
+  }
+  branches {
+    responseText: "Sir, our vehicle is broke down. Can you help us?"
+    nextNodeIndex: 4
+  }
+  branches {
+    responseText: "I got to go."
+    nextNodeIndex: 9
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4e43336332cb2314060b"
+  }
+  index: 1
+  text: "The troll moves his behemoth left hand down to your waist level and holds it open expectantly."
+  branches {
+    responseText: "{{GM}}Hand him the list.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Remove Item from Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "01a_parts_list"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+  }
+  branches {
+    responseText: "You don\'t talk much do you?"
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+}
+nodes {
+  idRef {
+    id: "5b7f6eeb3363322d2a10123c"
+  }
+  index: 2
+  text: "Give me a second, will ya?"
+  branches {
+    responseText: ""
+    actions {
+      ops {
+        functionName: "Set Variable (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "tt_hornymike"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+      ops {
+        functionName: "Trigger: Run Alternate Trigger"
+        args {
+          call_value {
+            functionName: "Get Map Item (Trigger)"
+            args {
+              string_value: "5b7f720a3363322d2a1012ef"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WaitOrNot"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: -1
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f6e2a3363322d2a10122a"
+  }
+  index: 3
+  text: "You want your parts or what?"
+  branches {
+    responseText: "{{GM}}Hand him the list.{{/GM}}"
+    actions {
+      ops {
+        functionName: "Remove Item from Actor"
+        args {
+          call_value {
+            functionName: "Get Map Item (Item)"
+            args {
+              string_value: "01a_parts_list"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Specific Actor"
+            args {
+              call_value {
+                functionName: "Get Map Item (Player)"
+                args {
+                  int_value: 0
+                }
+              }
+            }
+            args {
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "WithOrWithout"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 2
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f4e65336332cb2314060e"
+  }
+  index: 4
+  text: "{{GM}}He merely deadpans the next words.{{/GM}}\n\nGet lost."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f6cd23363322d2a10121d"
+  }
+  index: 5
+  text: "Allow me, $+(l.name).\n\nI am Ghamal, Paranormal Investigator, at your service.\n\nPerhaps-"
+  branches {
+    responseText: ""
+    nextNodeIndex: 6
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f6d263363322d2a101220"
+  }
+  index: 6
+  text: "Never heard of you. Don\'t care."
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f6d5b3363322d2a101223"
+  }
+  index: 7
+  text: "You mean-"
+  branches {
+    responseText: ""
+    nextNodeIndex: 8
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f6d883363322d2a101226"
+  }
+  index: 8
+  text: "Junk\'s not for sale."
+  branches {
+    responseText: "Uhm, Diamond Suede Dixon?"
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "Diamond Suede Dixon."
+    nextNodeIndex: 1
+    auxiliaryLink: true
+  }
+  branches {
+    responseText: "I got to go."
+    nextNodeIndex: 9
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b7f6c7b3363322d2a10121a"
+  }
+  index: 9
+  text: "Whatever."
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

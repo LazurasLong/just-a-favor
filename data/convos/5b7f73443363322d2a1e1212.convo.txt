@@ -1,0 +1,341 @@
+idRef {
+  id: "5b7f73443363322d2a1e1212"
+}
+ui_name: "01-yla-hornymike2"
+nodes {
+  idRef {
+    id: "5b7f73753363322d2a1012f7"
+  }
+  index: 0
+  text: "All right.\n\nHere you go."
+  branches {
+    responseText: ""
+    nextNodeIndex: 1
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Clear All Waypoints"
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f73a93363322d2a1012fa"
+  }
+  index: 1
+  text: "Horny Mike hands you and Ghamal the parts from the list."
+  branches {
+    responseText: ""
+    nextNodeIndex: 2
+  }
+  nodeType: ConversationNodeType_GM_Speaker_Voice
+  actions {
+    ops {
+      functionName: "Add Item to Actor"
+      args {
+        call_value {
+          functionName: "Get Map Item (Item)"
+          args {
+            string_value: "01a_parts"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Get Map Item (Player)"
+              args {
+                int_value: 0
+              }
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b7f740e3363322d2a1012fd"
+  }
+  index: 2
+  text: "We should\'ve just loaded up in that yellow van I commandeered earlier."
+  branches {
+    responseText: ""
+    nextNodeIndex: 3
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+nodes {
+  idRef {
+    id: "5b845a62336332f11b140545"
+  }
+  index: 3
+  text: "Now wait just a second here!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 4
+  }
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Order Actor to Face Direction"
+      args {
+        call_value {
+          functionName: "Specific Actor"
+          args {
+            call_value {
+              functionName: "Triggering Target Actor"
+            }
+          }
+          args {
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "FacingDirection"
+          }
+          args {
+            int_value: 4
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b845ade336332f11b140548"
+  }
+  index: 4
+  text: "I expect to be paid for services rendered.\n\nNow pay up. One Thousand."
+  branches {
+    responseText: "{{CC}}\302\2451000{{/CC}} Fine, here you go."
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 1000
+        }
+      }
+    }
+    nextNodeIndex: 5
+  }
+  branches {
+    responseText: "{{CC}}Charisma: 4{{/CC}} Our driver\'s the one who-- Ahem, calls you \'Diamond Suede Dixon.\' Nice nickname by the way, but you can put it on his bill."
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 4
+        }
+      }
+    }
+    nextNodeIndex: 6
+  }
+  branches {
+    responseText: "{{CC}}Charisma: 2{{/CC}} I\'m in rough here. Real rough. FIve Hundred. What do you say?"
+    conditions {
+      ops {
+        functionName: "Compare Actor Attribute"
+        args {
+          call_value {
+            functionName: "Triggering Actor"
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "BaseOrCurrent"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "ActorAttributes"
+            }
+            args {
+              int_value: 3
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "Comparison Ops"
+            }
+            args {
+              int_value: 0
+            }
+          }
+        }
+        args {
+          int_value: 2
+        }
+      }
+    }
+    actions {
+      ops {
+        functionName: "Remove Nuyen"
+        args {
+          int_value: 500
+        }
+      }
+    }
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b845e1e336332f11b14056a"
+  }
+  index: 5
+  text: "Pleasure doing business with you."
+  nodeType: ConversationNodeType_Simple
+  actions {
+    ops {
+      functionName: "Trigger: Run Alternate Trigger"
+      args {
+        call_value {
+          functionName: "Get Map Item (Trigger)"
+          args {
+            string_value: "5b845fd0336332f11b140585"
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 1
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WaitOrNot"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+      args {
+        call_value {
+          functionName: "Get Preset Value (int)"
+          args {
+            string_value: "WithOrWithout"
+          }
+          args {
+            int_value: 0
+          }
+        }
+      }
+    }
+  }
+}
+nodes {
+  idRef {
+    id: "5b845d6d336332f11b140564"
+  }
+  index: 6
+  text: "He\'s back over there.\n\n{{GM}}Ghamal points his arm up the ditch towards the van in a faux-pistol manner.{{/GM}}"
+  branches {
+    responseText: ""
+    nextNodeIndex: 7
+  }
+  nodeType: ConversationNodeType_Simple
+  sourceInSceneRef {
+    id: "5484efb0336265a40a005e40"
+  }
+}
+nodes {
+  idRef {
+    id: "5b845dc0336332f11b140567"
+  }
+  index: 7
+  text: "Hey, wait...\n\nYeah, you\'re that spirit detective fellow. Real fan of your work.\n\nTake a hike. It\'s on the house."
+  branches {
+    responseText: ""
+    nextNodeIndex: 5
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+roots {
+  nextNodeIndex: 0
+}

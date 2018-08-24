@@ -16453,6 +16453,41 @@ props {
   interactionRoot {
     isEnabled: true
     interactionRadius: 1
+    prerequisites {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Variable (bool)"
+            args {
+              string_value: "van_blew_up"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
     interactionIcon: InteractionIcon_SceneTransition
     interaction_info_text: "Enter Tunnels"
   }
@@ -28866,6 +28901,49 @@ props {
   orientation: ORIENTATION_S
   idRef {
     id: "5b7e12dc336332cd642b0e82"
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: -164
+    y: 2
+    z: 20
+  }
+  orientation: ORIENTATION_S
+  displayName: "hornymike_waypoint"
+  idRef {
+    id: "5b7f44af336332cb23140586"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "asylum_storage_futuristicCrate01"
+  gridPoint {
+    x: -128
+    y: 0
+    z: 26.4
+  }
+  orientation: ORIENTATION_S
+  idRef {
+    id: "5b8465c2336332f11b1405b7"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    pickupItem {
+      itemName: "CyberdeckKraftwerk1"
+      destroyOnPickup: true
+    }
+    interaction_info_text: ""
   }
   lod: 0
 }

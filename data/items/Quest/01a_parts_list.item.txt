@@ -1,0 +1,8 @@
+id: "01a_parts_list"
+type: ItemType_QuestItem
+uirep {
+  name: "Parts List"
+  description: "Intake Manifold\nRadiator\nNeuro-EFI Modulator"
+}
+credentials: 0
+sorting_group: "Quest"

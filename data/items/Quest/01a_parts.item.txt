@@ -1,0 +1,8 @@
+id: "01a_parts"
+type: ItemType_QuestItem
+uirep {
+  name: "Van Parts"
+  description: "Parts needed to get your van back on the road."
+}
+credentials: 0
+sorting_group: "Quest"
