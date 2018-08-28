@@ -83,14 +83,10 @@ nodes {
   branches {
     responseText: "That\'s all you know?"
     nextNodeIndex: 7
-    onlyOnce: true
-    idRef {
-      id: "5490eb51336265d415004e69"
-    }
   }
   branches {
     responseText: "You want to run with me? Fine. Know that we won\'t be chasing some stupid cult."
-    nextNodeIndex: 11
+    nextNodeIndex: 16
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -103,6 +99,57 @@ nodes {
   branches {
     responseText: "Did you know that they are connected to Renraku?"
     nextNodeIndex: 8
+    onlyOnce: true
+    idRef {
+      id: "5b8574673363322a0fc84409"
+    }
+  }
+  branches {
+    responseText: "Does the name \'Ayle\' ring any bells to you?"
+    conditions {
+      ops {
+        functionName: "Comparison (bool)"
+        args {
+          call_value {
+            functionName: "Get Story Variable (bool)"
+            args {
+              string_value: "545e82f23362655810005f46"
+            }
+            args {
+              string_value: "00_apartments_magicalTaken"
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "IsOrIsNot"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+        args {
+          call_value {
+            functionName: "Get Preset Value (int)"
+            args {
+              string_value: "bool"
+            }
+            args {
+              int_value: 1
+            }
+          }
+        }
+      }
+    }
+    nextNodeIndex: 11
+    hideIfUnavailable: true
+    onlyOnce: true
+    idRef {
+      id: "5b8574d93363322a0fc8440d"
+    }
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -145,13 +192,79 @@ nodes {
 }
 nodes {
   idRef {
-    id: "5484f6c8336265a40a005e7e"
+    id: "5b8574cd3363322a0fc8440c"
   }
   index: 11
+  text: "Ayle? No why?"
+  branches {
+    responseText: "She\'s the true culprit behind the \'corrupted chips.\'"
+    nextNodeIndex: 12
+  }
+  branches {
+    responseText: "My friend, Wiseman-- his sister was in trouble. By the time we got there, she was dead. I sensed her doing Dunkelzahn knows what."
+    nextNodeIndex: 15
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b8577143363322a0fc84418"
+  }
+  index: 12
+  text: "What makes you suspect such?\n\nI mean- I\'m all ears."
+  branches {
+    responseText: "We ran into her goons not once but twice. On two separate occasions."
+    nextNodeIndex: 13
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b8577813363322a0fc8441b"
+  }
+  index: 13
+  text: "Incredible!\n\nOne might say that you\'re either nigh unlucky or very lucky, $+(l.name).\n\nI\'m going with the latter."
+  branches {
+    responseText: ""
+    nextNodeIndex: 14
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b8577e13363322a0fc8441e"
+  }
+  index: 14
+  text: "This is the kind of lead that I have been looking for!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5b85766a3363322a0fc84411"
+  }
+  index: 15
+  text: "{{GM}}He briefly puts his hand on his chin.{{/GM}}\n\nYes, yes. That would make sense given what the Spirits have been saying.\n\nThis mysterious Ayle gal could be the missing link in my investigation!"
+  branches {
+    responseText: ""
+    nextNodeIndex: 10
+    auxiliaryLink: true
+  }
+  nodeType: ConversationNodeType_Simple
+}
+nodes {
+  idRef {
+    id: "5484f6c8336265a40a005e7e"
+  }
+  index: 16
   text: "You saw the magic with your own eyes, $+(l.name). It is inevitable that we will encounter them as they put their plans in action.\n\nBut, I understand. I will make an asset to your team. I am a skilled Shaman and good with a shotgun."
   branches {
     responseText: "Follow me."
-    nextNodeIndex: 12
+    nextNodeIndex: 17
   }
   nodeType: ConversationNodeType_Simple
 }
@@ -159,7 +272,7 @@ nodes {
   idRef {
     id: "5484f75f336265a40a005e81"
   }
-  index: 12
+  index: 17
   text: "I... ehrm, well I stole that yellow van over there. Perhaps, I could ride with you?"
   branches {
     responseText: "Sure, whatever."

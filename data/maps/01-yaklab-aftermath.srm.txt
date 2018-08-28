@@ -1,7 +1,7 @@
 minX: -177
-minZ: -41
+minZ: -123
 numX: 192
-numZ: 97
+numZ: 179
 props {
   name: "barrens_ground_multiLaneBot01"
   gridPoint {
@@ -6796,6 +6796,16 @@ props {
     string_value: "Berlin:EnvironmentSmokeyFire"
   }
   displayName: "Engine_failure"
+  idRef {
+    id: "5b8568d53363322a0fc843e0"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    dummyInteraciton {
+    }
+    interaction_info_text: ""
+  }
   lod: 0
 }
 props {
@@ -28942,6 +28952,29 @@ props {
     pickupItem {
       itemName: "CyberdeckKraftwerk1"
       destroyOnPickup: true
+    }
+    interaction_info_text: ""
+  }
+  lod: 0
+}
+props {
+  name: "system_invisible_nonsolidProp"
+  gridPoint {
+    x: -137
+    y: 0
+    z: -123
+  }
+  orientation: ORIENTATION_S
+  displayName: "scene_transition_breakdown"
+  idRef {
+    id: "5b856af33363322a0fc843e3"
+  }
+  interactionRoot {
+    isEnabled: true
+    interactionRadius: 1
+    transitionPoint {
+      scene_name: "00-Sybrespace"
+      confirmation_text: "Load up and head to Sybrespace?"
     }
     interaction_info_text: ""
   }

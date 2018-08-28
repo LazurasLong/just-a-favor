@@ -9223,11 +9223,13 @@ characters {
     char_name: "Red Samurai Captain"
     enabled_at_start: false
     pc_spawn_number: -1
+    hiring_type: HiringType_None
     cyberware_eyes: "Vision Magnification Eyes (Blitz)"
     portrait {
-      filename: "pc_humanmale_00b"
+      filename: "misc_tiki-right"
     }
     karma: 136
+    hiring_cost_override: 1000
   }
 }
 characters {

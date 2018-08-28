@@ -1,0 +1,37 @@
+unique_id: "winterhawk_equipment"
+equipment {
+  prefab_name: "Berlin_Spell Powerbolt 3"
+}
+equipment {
+  prefab_name: "Berlin_Spell Manaball 2"
+}
+equipment {
+  prefab_name: "Berlin_Spell Heal Wound 2"
+}
+equipment {
+  prefab_name: "Berlin_Spell Weaken Armor 2"
+}
+equipment {
+  prefab_name: "Player_SamuraiTrenchcoat"
+}
+equipment {
+  prefab_name: "Pi 1 Fichetti Security 500"
+}
+equipment {
+  prefab_name: "Berlin_Spell Flamethrower 2"
+}
+equipment {
+  prefab_name: "Spell Acid Stream 1"
+}
+equipment {
+  prefab_name: "DocWagonBasic"
+}
+equipment {
+  prefab_name: "DocWagonGold"
+}
+equipment {
+  prefab_name: "HealthPack_med"
+}
+equipment {
+  prefab_name: "Berlin_Cram"
+}

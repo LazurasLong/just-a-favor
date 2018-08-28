@@ -48,6 +48,18 @@ variables {
   }
 }
 variables {
+  name: "01_winterhawk_hasjoined"
+  typeName: "bool"
+  defaultValue {
+    bool_value: false
+    variableref_value {
+      scope: TsVariableScope_Story
+      name: "01_winterhawk_hasjoined"
+      typeName: "bool"
+    }
+  }
+}
+variables {
   name: "01_yakuzalab_broughtWisman"
   typeName: "bool"
   defaultValue {
@@ -1998,6 +2010,13 @@ character_roster {
     hiring_conditions {
     }
     hiring_cost: 4
+    content_pack_source: "545e82f23362655810005f46"
+  }
+  roster_entries {
+    reference_id: "Winterhawk"
+    hiring_conditions {
+    }
+    hiring_cost: 2
     content_pack_source: "545e82f23362655810005f46"
   }
   roster_entries {
